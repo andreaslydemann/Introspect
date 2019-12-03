@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD68523970306002C6EA3 /* LaunchScreen.storyboard */; };
 		8EDCD69223970306002C6EA3 /* IntrospectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD69123970306002C6EA3 /* IntrospectTests.swift */; };
 		8EDCD69D23970306002C6EA3 /* IntrospectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD69C23970306002C6EA3 /* IntrospectUITests.swift */; };
+		8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AB23970C56002C6EA3 /* Swinject */; };
+		8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
+				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,10 @@
 			dependencies = (
 			);
 			name = Introspect;
+			packageProductDependencies = (
+				8EDCD6AB23970C56002C6EA3 /* Swinject */,
+				8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */,
+			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +224,10 @@
 				Base,
 			);
 			mainGroup = 8EDCD66B23970303002C6EA3;
+			packageReferences = (
+				8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */,
+				8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -433,6 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslydemann.Introspect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -451,6 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslydemann.Introspect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -582,6 +596,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EDCD6AB23970C56002C6EA3 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8EDCD68023970303002C6EA3 /* Introspect.xcdatamodeld */ = {

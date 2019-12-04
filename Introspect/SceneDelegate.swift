@@ -11,7 +11,6 @@ import Swinject
 import SwinjectAutoregistration
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
     private let container = Swinject.Container()
 
@@ -20,16 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        defer { self.window = window }
         
-        let navigationController = UINavigationController(rootViewController: container.resolve(ViewController.self)!)
-        
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        window.windowScene = windowScene
+        window.rootViewController = UINavigationController(rootViewController: container.resolve(HomeViewController.self)!)
+        window.makeKeyAndVisible()
     }
     
     func registerServices(container: Swinject.Container) {
-        container.autoregister(ViewController.self, initializer: ViewController.init)
+        container.autoregister(HomeViewController.self, initializer: HomeViewController.init)
     }
 }

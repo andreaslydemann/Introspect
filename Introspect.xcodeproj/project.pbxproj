@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
-		8EDCD67C23970303002C6EA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* HomeViewController.swift */; };
+		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
 		8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD68023970303002C6EA3 /* Introspect.xcdatamodeld */; };
 		8EDCD68423970306002C6EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD68323970306002C6EA3 /* Assets.xcassets */; };
 		8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD68523970306002C6EA3 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,13 @@
 		8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AB23970C56002C6EA3 /* Swinject */; };
 		8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */; };
 		8EDCD6B22397884B002C6EA3 /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD6B12397884B002C6EA3 /* UI */; };
+		8EDCD6B823983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6B723983492002C6EA3 /* CheckInCollectionViewCell.swift */; };
+		8EDCD6B923983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6B723983492002C6EA3 /* CheckInCollectionViewCell.swift */; };
+		8EDCD6BA23983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6B723983492002C6EA3 /* CheckInCollectionViewCell.swift */; };
+		8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6BC239836A5002C6EA3 /* UI */; };
+		8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */; };
+		8EDCD6C023983781002C6EA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */; };
+		8EDCD6C123983781002C6EA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +48,7 @@
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EDCD67B23970303002C6EA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewController.swift; sourceTree = "<group>"; };
 		8EDCD68123970303002C6EA3 /* Introspect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Introspect.xcdatamodel; sourceTree = "<group>"; };
 		8EDCD68323970306002C6EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EDCD68623970306002C6EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +60,8 @@
 		8EDCD69C23970306002C6EA3 /* IntrospectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrospectUITests.swift; sourceTree = "<group>"; };
 		8EDCD69E23970306002C6EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EDCD6B12397884B002C6EA3 /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
+		8EDCD6B723983492002C6EA3 /* CheckInCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInCollectionViewCell.swift; sourceTree = "<group>"; };
+		8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
+				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
 				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +100,7 @@
 				8EDCD69023970306002C6EA3 /* IntrospectTests */,
 				8EDCD69B23970306002C6EA3 /* IntrospectUITests */,
 				8EDCD67523970303002C6EA3 /* Products */,
+				8EDCD6BB239836A5002C6EA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +149,18 @@
 		8EDCD6B023978486002C6EA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8EDCD67B23970303002C6EA3 /* HomeViewController.swift */,
+				8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */,
+				8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */,
+				8EDCD6B723983492002C6EA3 /* CheckInCollectionViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8EDCD6BB239836A5002C6EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +182,7 @@
 			packageProductDependencies = (
 				8EDCD6AB23970C56002C6EA3 /* Swinject */,
 				8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */,
+				8EDCD6BC239836A5002C6EA3 /* UI */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -282,10 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EDCD67C23970303002C6EA3 /* HomeViewController.swift in Sources */,
+				8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
+				8EDCD6B823983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */,
 				8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */,
+				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDCD6B923983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */,
 				8EDCD69223970306002C6EA3 /* IntrospectTests.swift in Sources */,
+				8EDCD6C023983781002C6EA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDCD6BA23983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */,
 				8EDCD69D23970306002C6EA3 /* IntrospectUITests.swift in Sources */,
+				8EDCD6C123983781002C6EA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +665,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		8EDCD6BC239836A5002C6EA3 /* UI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

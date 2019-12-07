@@ -13,47 +13,80 @@ import UI
     func didSelectCheckIn(_ userId: String, viewController: CheckInListViewController)
 }*/
 
-class CheckInListViewController: UICollectionViewController {
+class CheckInListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Best New Apps"
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    lazy var collectionViewLayout: UICollectionViewLayout = {
+        var section = self.section
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            return section.layoutSection()
+        }
+        return layout
     }()
     
-    func setupViews() {
-        view.backgroundColor = .green
-        
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = .systemBackground
         collectionView.dataSource = self
         collectionView.delegate = self
+
         
         collectionView.register(CheckInCollectionViewCell.self)
-    }
+        
+        return collectionView
+    }()
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
-    }
+    let section = CheckInSection()
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusable(withCell: CheckInCollectionViewCell.self, for: indexPath)
+    func setupViews() {
+        view.addSubview(collectionView)
+        collectionView.fillSuperview()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        collectionView.reloadData()
     }
 }
 
-extension CheckInListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: view.frame.height - 32)
+extension CheckInListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.section.numberOfItems
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return section.configureCell(collectionView: collectionView, indexPath: indexPath)
     }
 }
 
-//extension CheckInListViewController: UICollectionViewDelegate { }
+extension CheckInListViewController: UICollectionViewDelegate { }
+
+struct CheckInSection {
+    let numberOfItems = 5
+
+    func layoutSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .fractionalHeight(1))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+
+        return section
+    }
+
+    func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CheckInCollectionViewCell.self), for: indexPath)
+        return cell
+    }
+}

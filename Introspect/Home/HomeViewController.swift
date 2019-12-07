@@ -19,36 +19,46 @@ class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let checkInListViewController: CheckInListViewController = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let vc = CheckInListViewController(collectionViewLayout: layout)
-        return vc
-    }()
-    
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Hi Andreas"
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 28)
         return label
     }()
     
+    private let checkInListViewController = CheckInListViewController()
+    
+    private let reportButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "chart.bar"), for: .normal)
+        return button
+    }()
+    
+    private let settingsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "gear"), for: .normal)
+        return button
+    }()
+    
+    private lazy var footerView: UIStackView = {
+        let footerView = UIStackView(arrangedSubviews: [reportButton, settingsButton])
+        footerView.distribution = .equalSpacing
+        return footerView
+    }()
+    
     override open func loadView() {
-        self.view = UIView()
+        view = UIView()
+        view.backgroundColor = .systemBackground
         
-        view.backgroundColor = .blue
-        
-        view.addSubview(checkInListViewController.view)
-        view.addSubview(nameLabel)
-        
-        nameLabel.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: checkInListViewController.view.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 100, left: 15, bottom: 0, right: 15))
-        checkInListViewController.view.anchor(top: nameLabel.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 15, left: 15, bottom: 15, right: 15))
+        view.addSubviews(nameLabel, checkInListViewController.view, footerView)
+        print(shouldAutomaticallyForwardAppearanceMethods)
 
-        self.view = view
+        nameLabel.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: checkInListViewController.view.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 100, left: 15, bottom: 15, right: 15))
+        checkInListViewController.view.anchor(top: nameLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 15, left: 0, bottom: 15, right: 0))
+        footerView.anchor(top: checkInListViewController.view.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 15, bottom: 0, right: 15), size: .init(width: 0, height: 50))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
     }
 }

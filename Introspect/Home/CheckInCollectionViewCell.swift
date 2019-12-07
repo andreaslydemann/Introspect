@@ -12,8 +12,6 @@ class CheckInCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        backgroundColor = .yellow
         setupViews()
     }
     
@@ -21,39 +19,38 @@ class CheckInCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Disney Build It: Frozen"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.numberOfLines = 2
-        return label
+    let plusIcon: UIImageView = {
+        let image = UIImage(systemName: "plus")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
-    let categoryLabel: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Entertainment"
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = UIColor.darkGray
-        return label
-    }()
-
-    let priceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "$3.99"
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = UIColor.darkGray
+        label.text = "Add check-in"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textAlignment = .center
         return label
     }()
     
     func setupViews() {
-        addSubview(nameLabel)
-        addSubview(categoryLabel)
-        addSubview(priceLabel)
         
-        backgroundColor = .red
+        let backgroundView = UIView()
         
-        nameLabel.frame = CGRect(x:0, y: 0, width: frame.width, height: frame.width)
-        categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
-        priceLabel.frame = CGRect(x: 0, y: frame.width + 56, width: frame.width, height: 200)
+        backgroundView.addSubviews(plusIcon, nameLabel)
+        
+        backgroundView.backgroundColor = .systemTeal
+        contentView.addSubview(backgroundView)
+        
+        backgroundView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 8, bottom: 8, right: 8))
+        plusIcon.centerInSuperview(size: CGSize(width: 60, height: 60))
+        nameLabel.anchor(top: plusIcon.bottomAnchor, leading: backgroundView.leadingAnchor, bottom: nil, trailing: backgroundView.trailingAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+        
+        backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 4, height:  backgroundView.frame.height + 4)
+        backgroundView.layer.cornerRadius = 4
+        backgroundView.layer.shadowRadius = 4
+        backgroundView.layer.shadowOpacity = 0.23
+        backgroundView.layer.shadowColor = UIColor.black.cgColor
     }
 }

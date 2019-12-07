@@ -9,11 +9,13 @@
 import UIKit
 import UI
 
-/*public protocol CheckInListViewControllerDelegate: class {
+protocol CheckInListViewControllerDelegate: class {
     func didSelectCheckIn(_ userId: String, viewController: CheckInListViewController)
-}*/
+}
 
-class CheckInListViewController: UIViewController {
+final class CheckInListViewController: UIViewController {
+    
+    weak var delegate: CheckInListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +33,10 @@ class CheckInListViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = .systemBackground
+        collectionView.delaysContentTouches = false
+        
         collectionView.dataSource = self
         collectionView.delegate = self
-
         
         collectionView.register(CheckInCollectionViewCell.self)
         
@@ -61,6 +64,10 @@ extension CheckInListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return section.configureCell(collectionView: collectionView, indexPath: indexPath)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.didSelectCheckIn("my user id", viewController: self)
+    }
 }
 
 extension CheckInListViewController: UICollectionViewDelegate { }
@@ -72,7 +79,7 @@ struct CheckInSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .fractionalHeight(1))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.94), heightDimension: .fractionalHeight(1))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)

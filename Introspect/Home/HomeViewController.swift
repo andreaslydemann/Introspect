@@ -52,11 +52,13 @@ class HomeViewController: UIViewController {
         view.addSubviews(nameLabel, checkInListViewController.view, footerView)
         addChild(checkInListViewController)
         
+        checkInListViewController.delegate = self
+        
         nameLabel.anchor(top: view.topAnchor,
-                         leading: view.leadingAnchor,
+                         leading: view.layoutMarginsGuide.leadingAnchor,
                          bottom: checkInListViewController.view.topAnchor,
-                         trailing: view.trailingAnchor,
-                         padding: .init(top: 100, left: 15, bottom: 15, right: 15))
+                         trailing: view.layoutMarginsGuide.trailingAnchor,
+                         padding: .init(top: 100, left: 0, bottom: 15, right: 0))
         
         checkInListViewController.view.anchor(top: nameLabel.bottomAnchor,
                                               leading: view.leadingAnchor,
@@ -65,15 +67,20 @@ class HomeViewController: UIViewController {
                                               padding: .init(top: 15, left: 0, bottom: 15, right: 0))
         
         footerView.anchor(top: checkInListViewController.view.bottomAnchor,
-                          leading: view.leadingAnchor,
+                          leading: view.layoutMarginsGuide.leadingAnchor,
                           bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                          trailing: view.trailingAnchor,
-                          padding: .init(top: 0, left: 15, bottom: 0, right: 15),
+                          trailing: view.layoutMarginsGuide.trailingAnchor,
                           size: .init(width: 0, height: 50))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+}
+
+extension HomeViewController: CheckInListViewControllerDelegate {
+    public func didSelectCheckIn(_ userId: String, viewController: CheckInListViewController) {
+        print(userId)
     }
 }

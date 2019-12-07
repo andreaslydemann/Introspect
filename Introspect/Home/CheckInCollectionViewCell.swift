@@ -19,6 +19,10 @@ class CheckInCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var isSelected: Bool {
+        didSet { layer.opacity = self.isSelected ? 0.5 : 1 }
+    }
+    
     let plusIcon: UIImageView = {
         let image = UIImage(systemName: "plus")
         let imageView = UIImageView(image: image)
@@ -34,23 +38,35 @@ class CheckInCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func setupViews() {
-        
+    let containerView: UIView = {
         let backgroundView = UIView()
         
-        backgroundView.addSubviews(plusIcon, nameLabel)
-        
         backgroundView.backgroundColor = .systemTeal
-        contentView.addSubview(backgroundView)
-        
-        backgroundView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 8, bottom: 8, right: 8))
-        plusIcon.centerInSuperview(size: CGSize(width: 60, height: 60))
-        nameLabel.anchor(top: plusIcon.bottomAnchor, leading: backgroundView.leadingAnchor, bottom: nil, trailing: backgroundView.trailingAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0))
-        
-        backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 4, height:  backgroundView.frame.height + 4)
+        backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 2, height:  backgroundView.frame.height + 2)
         backgroundView.layer.cornerRadius = 4
         backgroundView.layer.shadowRadius = 4
         backgroundView.layer.shadowOpacity = 0.23
         backgroundView.layer.shadowColor = UIColor.black.cgColor
+        
+        return backgroundView
+    }()
+    
+    func setupViews() {
+        containerView.addSubviews(plusIcon, nameLabel)
+        contentView.addSubview(containerView)
+        
+        containerView.anchor(top: topAnchor,
+                             leading: leadingAnchor,
+                              bottom: bottomAnchor,
+                              trailing: trailingAnchor,
+                              padding: .init(top: 8, left: 4, bottom: 8, right: 4))
+        
+        plusIcon.centerInSuperview(size: CGSize(width: 60, height: 60))
+        
+        nameLabel.anchor(top: plusIcon.bottomAnchor,
+                         leading: containerView.leadingAnchor,
+                         bottom: nil,
+                         trailing: containerView.trailingAnchor,
+                         padding: .init(top: 20, left: 0, bottom: 0, right: 0))
     }
 }

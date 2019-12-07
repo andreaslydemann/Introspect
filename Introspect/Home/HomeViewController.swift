@@ -46,19 +46,34 @@ class HomeViewController: UIViewController {
         return footerView
     }()
     
-    override open func loadView() {
-        view = UIView()
+    func setupViews() {
         view.backgroundColor = .systemBackground
         
         view.addSubviews(nameLabel, checkInListViewController.view, footerView)
-        print(shouldAutomaticallyForwardAppearanceMethods)
-
-        nameLabel.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: checkInListViewController.view.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 100, left: 15, bottom: 15, right: 15))
-        checkInListViewController.view.anchor(top: nameLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 15, left: 0, bottom: 15, right: 0))
-        footerView.anchor(top: checkInListViewController.view.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 15, bottom: 0, right: 15), size: .init(width: 0, height: 50))
+        addChild(checkInListViewController)
+        
+        nameLabel.anchor(top: view.topAnchor,
+                         leading: view.leadingAnchor,
+                         bottom: checkInListViewController.view.topAnchor,
+                         trailing: view.trailingAnchor,
+                         padding: .init(top: 100, left: 15, bottom: 15, right: 15))
+        
+        checkInListViewController.view.anchor(top: nameLabel.bottomAnchor,
+                                              leading: view.leadingAnchor,
+                                              bottom: nil,
+                                              trailing: view.trailingAnchor,
+                                              padding: .init(top: 15, left: 0, bottom: 15, right: 0))
+        
+        footerView.anchor(top: checkInListViewController.view.bottomAnchor,
+                          leading: view.leadingAnchor,
+                          bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                          trailing: view.trailingAnchor,
+                          padding: .init(top: 0, left: 15, bottom: 0, right: 15),
+                          size: .init(width: 0, height: 50))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
 }

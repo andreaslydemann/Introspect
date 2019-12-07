@@ -51,10 +51,6 @@ class CheckInListViewController: UIViewController {
         super.viewDidAppear(animated)
         collectionView.reloadData()
     }
-
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        collectionView.reloadData()
-    }
 }
 
 extension CheckInListViewController: UICollectionViewDataSource {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E374C6E23A2AE1F00EA9888 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E374C6D23A2AE1F00EA9888 /* R.generated.swift */; };
 		8E374C7323A2AE5600EA9888 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E374C7223A2AE5600EA9888 /* Rswift */; };
+		8E374C7523A2AFA000EA9888 /* BuildTools in Resources */ = {isa = PBXBuildFile; fileRef = 8E374C7423A2AFA000EA9888 /* BuildTools */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
 		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		8E374C6D23A2AE1F00EA9888 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		8E374C7423A2AFA000EA9888 /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BuildTools; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				8E374C6D23A2AE1F00EA9888 /* R.generated.swift */,
+				8E374C7423A2AFA000EA9888 /* BuildTools */,
 				8EDCD6B12397884B002C6EA3 /* UI */,
 				8EDCD67623970303002C6EA3 /* Introspect */,
 				8EDCD69023970306002C6EA3 /* IntrospectTests */,
@@ -287,6 +290,7 @@
 				8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */,
 				8EDCD6B22397884B002C6EA3 /* UI in Resources */,
 				8EDCD68423970306002C6EA3 /* Assets.xcassets in Resources */,
+				8E374C7523A2AFA000EA9888 /* BuildTools in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

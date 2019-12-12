@@ -6,10 +6,8 @@ public struct AnchoredConstraints {
 
 @available(iOS 9.0, *)
 public extension UIView {
-
     @discardableResult
     func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) -> AnchoredConstraints {
-
         translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraints = AnchoredConstraints()
 
@@ -41,7 +39,7 @@ public extension UIView {
 
         return anchoredConstraints
     }
-    
+
     @available(iOS 9.0, *)
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false

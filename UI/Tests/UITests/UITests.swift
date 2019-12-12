@@ -1,5 +1,5 @@
-import XCTest
 @testable import UI
+import XCTest
 
 final class UITests: XCTestCase {
     func testExample() {
@@ -9,7 +9,5 @@ final class UITests: XCTestCase {
         XCTAssertEqual(Introspect().text, "Hello, World!")
     }
 
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+    static var allTests = [("testExample", testExample)]
 }

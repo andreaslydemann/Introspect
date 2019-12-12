@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E374C6E23A2AE1F00EA9888 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E374C6D23A2AE1F00EA9888 /* R.generated.swift */; };
+		8E374C7323A2AE5600EA9888 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E374C7223A2AE5600EA9888 /* Rswift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
 		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E374C6D23A2AE1F00EA9888 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
+				8E374C7323A2AE5600EA9888 /* Rswift in Frameworks */,
 				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
 				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
@@ -95,6 +99,7 @@
 		8EDCD66B23970303002C6EA3 = {
 			isa = PBXGroup;
 			children = (
+				8E374C6D23A2AE1F00EA9888 /* R.generated.swift */,
 				8EDCD6B12397884B002C6EA3 /* UI */,
 				8EDCD67623970303002C6EA3 /* Introspect */,
 				8EDCD69023970306002C6EA3 /* IntrospectTests */,
@@ -170,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EDCD6A123970306002C6EA3 /* Build configuration list for PBXNativeTarget "Introspect" */;
 			buildPhases = (
+				8E374C6C23A2AA6D00EA9888 /* ShellScript */,
 				8EDCD67023970303002C6EA3 /* Sources */,
 				8EDCD67123970303002C6EA3 /* Frameworks */,
 				8EDCD67223970303002C6EA3 /* Resources */,
@@ -183,6 +189,7 @@
 				8EDCD6AB23970C56002C6EA3 /* Swinject */,
 				8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */,
 				8EDCD6BC239836A5002C6EA3 /* UI */,
+				8E374C7223A2AE5600EA9888 /* Rswift */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -259,6 +266,7 @@
 			packageReferences = (
 				8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */,
 				8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				8E374C7123A2AE5600EA9888 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
@@ -298,12 +306,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E374C6C23A2AA6D00EA9888 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\n\n#Temporarily uncomment the following line to update your packages (based on the versions defined in BuildTools/Package.swift)\n#swift package update\n\nswift run -c release swiftformat \"$SRCROOT\"\nswift run -c release rswift generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EDCD67023970303002C6EA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */,
+				8E374C6E23A2AE1F00EA9888 /* R.generated.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
 				8EDCD6B823983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */,
@@ -639,6 +670,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E374C7123A2AE5600EA9888 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -658,6 +697,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E374C7223A2AE5600EA9888 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E374C7123A2AE5600EA9888 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
 		8EDCD6AB23970C56002C6EA3 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */;

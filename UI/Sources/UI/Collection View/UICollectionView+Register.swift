@@ -2,13 +2,13 @@ import UIKit
 
 public extension UICollectionView {
     func register(_ cellClass: AnyClass) {
-        self.register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
+        register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
     }
-    
+
     func register(_ cellClasses: [AnyClass]) {
         cellClasses.forEach { register($0) }
     }
-    
+
     func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
 		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		8ED5BFD123A6855C009D98A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8ED5BFD223A687E6009D98A4 /* R.generated.swift */,
 				8EDCD68323970306002C6EA3 /* Assets.xcassets */,
 				8EDCD68523970306002C6EA3 /* LaunchScreen.storyboard */,
 			);
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */,
+				8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
 				8EDCD6B823983492002C6EA3 /* CheckInCollectionViewCell.swift in Sources */,

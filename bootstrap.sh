@@ -14,3 +14,22 @@ if [ -e "Mintfile" ]; then
   install_current mint
   mint bootstrap
 fi
+
+# Install ruby if a .ruby-version exists
+if [ -e ".ruby-version" ]; then
+  echo "installing ruby version";
+
+  brew install rbenv
+  brew install ruby-build
+  # install ruby version from .ruby-version, skipping if already installed (-s)
+  rbenv install -s
+fi
+
+# Install gems if a Gemfile exists
+if [ -e "Gemfile" ]; then
+  echo "installing ruby gems";
+
+  # install bundler gem for ruby dependency management
+  gem install bundler --no-document || echo "failed to install bundle";
+  bundle install || echo "failed to install bundle";
+fi

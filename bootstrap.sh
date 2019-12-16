@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "checking for homebrew updates";
 brew update
 
 function install_current {

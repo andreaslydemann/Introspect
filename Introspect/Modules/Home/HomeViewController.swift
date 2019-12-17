@@ -9,18 +9,27 @@
 import UI
 import UIKit
 
+struct User {
+    let name: String
+}
+
 class HomeViewController: UIViewController {
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    private var user: User?
+
+    convenience init(user: User) {
+        self.init()
+        self.user = user
     }
 
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    private let nameLabel: UILabel = {
+    lazy var greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hi Andreas"
+
+        if let user = user {
+            label.text = "Hi, " + user.name
+        } else {
+            label.text = ""
+        }
+
         label.font = UIFont.systemFont(ofSize: 28)
         return label
     }()
@@ -48,18 +57,18 @@ class HomeViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .systemBackground
 
-        view.addSubviews(nameLabel, checkInListViewController.view, footerView)
+        view.addSubviews(greetingLabel, checkInListViewController.view, footerView)
         addChild(checkInListViewController)
 
         checkInListViewController.delegate = self
 
-        nameLabel.anchor(top: view.topAnchor,
-                         leading: view.layoutMarginsGuide.leadingAnchor,
-                         bottom: checkInListViewController.view.topAnchor,
-                         trailing: view.layoutMarginsGuide.trailingAnchor,
-                         padding: .init(top: 100, left: 0, bottom: 15, right: 0))
+        greetingLabel.anchor(top: view.topAnchor,
+                             leading: view.layoutMarginsGuide.leadingAnchor,
+                             bottom: checkInListViewController.view.topAnchor,
+                             trailing: view.layoutMarginsGuide.trailingAnchor,
+                             padding: .init(top: 100, left: 0, bottom: 15, right: 0))
 
-        checkInListViewController.view.anchor(top: nameLabel.bottomAnchor,
+        checkInListViewController.view.anchor(top: greetingLabel.bottomAnchor,
                                               leading: view.leadingAnchor,
                                               bottom: nil,
                                               trailing: view.trailingAnchor,

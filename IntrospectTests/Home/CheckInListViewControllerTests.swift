@@ -11,7 +11,7 @@ import DateHelper
 import UIKit
 import XCTest
 
-class CheckInListViewControllerTest: XCTestCase {
+class CheckInListViewControllerTests: XCTestCase {
     func test_viewDidLoad_rendersCheckIns() {
         XCTAssertEqual(makeSUT().collectionView.numberOfItems(inSection: 0), 1)
 
@@ -23,11 +23,18 @@ class CheckInListViewControllerTest: XCTestCase {
             .collectionView.numberOfItems(inSection: 0), 3)
     }
 
-    /*
-     func test_viewDidLoad_rendersOptionsText() {
-     XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.title(at: 0), "A1")
-     XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.title(at: 1), "A2")
-     }*/
+    func test_viewDidLoad_withNoCheckIns_configuresCell() {
+        let sut = makeSUT(checkIns: [CheckIn(date: Date())])
+
+        sut.collectionView.reloadData()
+        sut.collectionView.layoutIfNeeded()
+
+        let cell = sut.collectionView.cell(at: 0)
+
+        XCTAssertNotNil(cell)
+        
+        //XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.title(at: 0), "A1")
+    }
 
     // MARK: Helpers
 

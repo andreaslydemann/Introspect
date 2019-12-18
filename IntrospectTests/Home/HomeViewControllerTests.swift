@@ -10,7 +10,7 @@
 import UIKit
 import XCTest
 
-class HomeViewControllerTest: XCTestCase {
+class HomeViewControllerTests: XCTestCase {
     func test_viewDidLoad_rendersGreeting() {
         XCTAssertEqual(makeSUT().greetingLabel.text, "")
         XCTAssertEqual(makeSUT(user: User(name: "Andreas")).greetingLabel.text, "Hi, Andreas")

@@ -48,7 +48,7 @@ final class CheckInListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        collectionView.register(CheckInCollectionViewCell.self)
+        collectionView.register(CreateCheckInCell.self)
 
         return collectionView
     }()
@@ -98,7 +98,6 @@ struct CheckInSection {
     }
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CheckInCollectionViewCell.self), for: indexPath)
-        return cell
+        return collectionView.dequeueReusable(withCell: CreateCheckInCell.self, for: indexPath)
     }
 }

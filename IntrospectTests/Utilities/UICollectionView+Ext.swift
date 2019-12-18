@@ -9,11 +9,11 @@
 import UIKit
 
 extension UICollectionView {
-    /* func cell(at row: Int) -> UICollectionViewCell? {
-         return dataSource?.collectionView(self, cellForItemAt: IndexPath(row: row, section: 0))
-     }
+    func cell(at row: Int) -> UICollectionViewCell? {
+        return dataSource?.collectionView(self, cellForItemAt: IndexPath(row: row, section: 0))
+    }
 
-     func title(at row: Int) -> String? {
+    /* func title(at row: Int) -> String? {
          cell(at: 1)?
          return cell(at: row)?.textLabel?.text
      } */

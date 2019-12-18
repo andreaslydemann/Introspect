@@ -1,14 +1,14 @@
 //
-//  CheckInCollectionViewCell.swift
+//  CreateCheckInCell.swift
 //  Introspect
 //
-//  Created by Andreas Lüdemann on 04/12/2019.
+//  Created by Andreas Lüdemann on 18/12/2019.
 //  Copyright © 2019 Andreas Lüdemann. All rights reserved.
 //
 
 import UIKit
 
-class CheckInCollectionViewCell: UICollectionViewCell {
+class CreateCheckInCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

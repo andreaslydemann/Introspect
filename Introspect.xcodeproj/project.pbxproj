@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */; };
+		8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */; };
 		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */,
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
 				8EE6D20B23A682080080C060 /* Rswift in Frameworks */,
 				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
@@ -215,6 +217,7 @@
 				8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */,
 				8EDCD6BC239836A5002C6EA3 /* UI */,
 				8EE6D20A23A682080080C060 /* Rswift */,
+				8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -292,6 +295,7 @@
 				8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */,
 				8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				8EE6D20923A682080080C060 /* XCRemoteSwiftPackageReference "R.swift" */,
+				8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
@@ -729,6 +733,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piknotech/SFSafeSymbols.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -756,6 +768,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
 		8EDCD6AB23970C56002C6EA3 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */;

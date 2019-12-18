@@ -6,6 +6,7 @@
 //  Copyright © 2019 Andreas Lüdemann. All rights reserved.
 //
 
+import SFSafeSymbols
 import UI
 import UIKit
 
@@ -23,7 +24,7 @@ class HomeViewController: UIViewController {
 
     lazy var greetingLabel: UILabel = {
         let label = UILabel()
-        
+
         guard let user = user else { fatalError("No user was passed") }
 
         label.text = user.name.isEmpty ? "" : "Hi, " + user.name
@@ -35,13 +36,13 @@ class HomeViewController: UIViewController {
 
     private let reportButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "chart.bar"), for: .normal)
+        button.setImage(UIImage(systemSymbol: .chartBar), for: .normal)
         return button
     }()
 
     private let settingsButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "gear"), for: .normal)
+        button.setImage(UIImage(systemSymbol: .gear), for: .normal)
         return button
     }()
 

@@ -10,6 +10,8 @@
 		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */; };
 		8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */; };
+		8ED0C63C23A9F60200DAAB34 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */; };
+		8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C64223A9F8F800DAAB34 /* DateHelper */; };
 		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
@@ -47,6 +49,7 @@
 /* Begin PBXFileReference section */
 		8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewControllerTest.swift; sourceTree = "<group>"; };
 		8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */,
 				8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */,
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
 				8EE6D20B23A682080080C060 /* Rswift in Frameworks */,
@@ -111,6 +115,14 @@
 				8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8ED0C63A23A9F5C700DAAB34 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		8ED5BFD123A6855C009D98A4 /* Resources */ = {
@@ -161,6 +173,7 @@
 		8EDCD69023970306002C6EA3 /* IntrospectTests */ = {
 			isa = PBXGroup;
 			children = (
+				8ED0C63A23A9F5C700DAAB34 /* Utilities */,
 				8E7E7EFF23A93EEC00555D65 /* Home */,
 				8EDCD69323970306002C6EA3 /* Info.plist */,
 			);
@@ -218,6 +231,7 @@
 				8EDCD6BC239836A5002C6EA3 /* UI */,
 				8EE6D20A23A682080080C060 /* Rswift */,
 				8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */,
+				8ED0C64223A9F8F800DAAB34 /* DateHelper */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -237,6 +251,8 @@
 				8EDCD68F23970306002C6EA3 /* PBXTargetDependency */,
 			);
 			name = IntrospectTests;
+			packageProductDependencies = (
+			);
 			productName = IntrospectTests;
 			productReference = 8EDCD68D23970306002C6EA3 /* IntrospectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -296,6 +312,7 @@
 				8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				8EE6D20923A682080080C060 /* XCRemoteSwiftPackageReference "R.swift" */,
 				8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				8ED0C64123A9F8F800DAAB34 /* XCRemoteSwiftPackageReference "DateHelper" */,
 			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
@@ -414,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTest.swift in Sources */,
+				8ED0C63C23A9F60200DAAB34 /* UICollectionView+Ext.swift in Sources */,
 				8E7E7F0323A94E1300555D65 /* HomeViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,6 +759,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		8ED0C64123A9F8F800DAAB34 /* XCRemoteSwiftPackageReference "DateHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/melvitax/DateHelper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 		8EDCD6AA23970C56002C6EA3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -772,6 +798,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		8ED0C64223A9F8F800DAAB34 /* DateHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ED0C64123A9F8F800DAAB34 /* XCRemoteSwiftPackageReference "DateHelper" */;
+			productName = DateHelper;
 		};
 		8EDCD6AB23970C56002C6EA3 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;

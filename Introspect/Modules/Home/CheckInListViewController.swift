@@ -13,8 +13,18 @@ protocol CheckInListViewControllerDelegate: AnyObject {
     func didSelectCheckIn(_ userId: String, viewController: CheckInListViewController)
 }
 
+struct CheckIn {
+    let date: Date
+}
+
 final class CheckInListViewController: UIViewController {
     weak var delegate: CheckInListViewControllerDelegate?
+    private var checkIns: [CheckIn] = []
+
+    convenience init(checkIns: [CheckIn]) {
+        self.init()
+        self.checkIns = checkIns
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +67,7 @@ final class CheckInListViewController: UIViewController {
 
 extension CheckInListViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return section.numberOfItems
+        return checkIns.count + 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,8 +82,6 @@ extension CheckInListViewController: UICollectionViewDataSource {
 extension CheckInListViewController: UICollectionViewDelegate {}
 
 struct CheckInSection {
-    let numberOfItems = 5
-
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)

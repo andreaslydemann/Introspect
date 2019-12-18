@@ -14,6 +14,7 @@
 		8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C64223A9F8F800DAAB34 /* DateHelper */; };
 		8ED0C64723AA07B400DAAB34 /* CreateCheckInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */; };
 		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
+		8EDB016023AA984C0032BEFA /* CompletedCheckInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB015F23AA984C0032BEFA /* CompletedCheckInCell.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
 		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
@@ -52,6 +53,7 @@
 		8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckInCell.swift; sourceTree = "<group>"; };
 		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		8EDB015F23AA984C0032BEFA /* CompletedCheckInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedCheckInCell.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */,
 				8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */,
 				8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */,
+				8EDB015F23AA984C0032BEFA /* CompletedCheckInCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
 				8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */,
+				8EDB016023AA984C0032BEFA /* CompletedCheckInCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

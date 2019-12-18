@@ -6,6 +6,7 @@
 //  Copyright © 2019 Andreas Lüdemann. All rights reserved.
 //
 
+import DateHelper
 import UI
 import UIKit
 
@@ -67,7 +68,8 @@ final class CheckInListViewController: UIViewController {
 
 extension CheckInListViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return checkIns.count + 1
+        if checkIns.isEmpty { return 1 }
+        return checkIns.count + (checkIns.first!.date.compare(.isToday) ? 0 : 1)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -10,6 +10,6 @@
 import UIKit
 import XCTest
 
-class CheckInListViewControllerTests: XCTestCase {
+class CheckInListViewControllerTest: XCTestCase {
     func test_viewDidLoad_rendersHeaderText() {}
 }

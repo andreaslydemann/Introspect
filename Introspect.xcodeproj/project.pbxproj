@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */; };
-		8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */; };
+		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */; };
+		8E7E7F0323A94E1300555D65 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */; };
 		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
@@ -44,8 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewControllerTests.swift; sourceTree = "<group>"; };
-		8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewControllerTest.swift; sourceTree = "<group>"; };
+		8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		8E7E7EFF23A93EEC00555D65 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */,
-				8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */,
+				8E7E7F0223A94E1300555D65 /* HomeViewControllerTest.swift */,
+				8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -409,8 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTests.swift in Sources */,
-				8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */,
+				8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTest.swift in Sources */,
+				8E7E7F0323A94E1300555D65 /* HomeViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

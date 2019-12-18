@@ -23,13 +23,10 @@ class HomeViewController: UIViewController {
 
     lazy var greetingLabel: UILabel = {
         let label = UILabel()
+        
+        guard let user = user else { fatalError("No user was passed") }
 
-        if let user = user {
-            label.text = "Hi, " + user.name
-        } else {
-            label.text = ""
-        }
-
+        label.text = user.name.isEmpty ? "" : "Hi, " + user.name
         label.font = UIFont.systemFont(ofSize: 28)
         return label
     }()

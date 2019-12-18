@@ -10,14 +10,15 @@
 import UIKit
 import XCTest
 
-class HomeViewControllerTests: XCTestCase {
+class HomeViewControllerTest: XCTestCase {
     func test_viewDidLoad_rendersGreeting() {
-        XCTAssertEqual(makeSUT().greetingLabel.text, "Hi, Andreas")
+        XCTAssertEqual(makeSUT().greetingLabel.text, "")
+        XCTAssertEqual(makeSUT(user: User(name: "Andreas")).greetingLabel.text, "Hi, Andreas")
     }
 
     // MARK: Helpers
 
-    func makeSUT(user: User = User(name: "Andreas")) -> HomeViewController {
+    func makeSUT(user: User = User(name: "")) -> HomeViewController {
         let sut = HomeViewController(user: user)
         sut.loadViewIfNeeded()
         return sut

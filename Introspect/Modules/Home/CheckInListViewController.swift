@@ -49,7 +49,7 @@ final class CheckInListViewController: UIViewController {
         collectionView.delegate = self
 
         collectionView.register(CreateCheckInCell.self)
-        collectionView.register(CompletedCheckInCell.self)
+        collectionView.register(PastCheckInCell.self)
 
         return collectionView
     }()

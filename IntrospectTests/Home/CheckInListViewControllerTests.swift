@@ -29,7 +29,7 @@ class CheckInListViewControllerTests: XCTestCase {
     }
 
     func test_viewDidLoad_withCheckIns_configuresCompletedCell() {
-        let cell = makeSUT(checkIns: twoPastCheckIns).collectionView.cell(at: 1) as? CompletedCheckInCell
+        let cell = makeSUT(checkIns: twoPastCheckIns).collectionView.cell(at: 1) as? PastCheckInCell
 
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell?.dayLabel.text, "22")

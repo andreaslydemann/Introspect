@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompletedCheckInCell: UICollectionViewCell {
+class PastCheckInCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

@@ -48,7 +48,7 @@ struct CheckInSection: Section {
         if let firstCheckIn = checkIns.first, !firstCheckIn.date.compare(.isToday), indexPath.row == 0 {
             return collectionView.dequeueReusable(withCell: CreateCheckInCell.self, for: indexPath)
         } else {
-            return collectionView.dequeueReusable(withCell: CompletedCheckInCell.self, for: indexPath)
+            return collectionView.dequeueReusable(withCell: PastCheckInCell.self, for: indexPath)
         }
     }
 }

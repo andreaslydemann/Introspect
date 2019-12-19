@@ -32,8 +32,7 @@ class HomeViewController: UIViewController {
         return label
     }()
 
-    private let checkInListViewController = CheckInListViewController(checkIns: [CheckIn(date: Date()),
-                                                                                 CheckIn(date: Date(fromString: "2009-08-11", format: .isoDate)!)])
+    private let checkInListViewController = CheckInListViewController(checkIns: [])
 
     private let reportButton: UIButton = {
         let button = UIButton(type: .system)

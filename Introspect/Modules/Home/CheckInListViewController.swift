@@ -69,7 +69,7 @@ final class CheckInListViewController: UIViewController {
 
 extension CheckInListViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return self.section.numberOfItems
+        return section.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

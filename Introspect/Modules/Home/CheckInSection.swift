@@ -41,7 +41,11 @@ struct CheckInSection: Section {
     }
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        if let firstCheckIn = checkIns.first, !firstCheckIn.date.compare(.isToday) && indexPath.row == 0 {
+        if checkIns.isEmpty {
+            return collectionView.dequeueReusable(withCell: CreateCheckInCell.self, for: indexPath)
+        }
+
+        if let firstCheckIn = checkIns.first, !firstCheckIn.date.compare(.isToday), indexPath.row == 0 {
             return collectionView.dequeueReusable(withCell: CreateCheckInCell.self, for: indexPath)
         } else {
             return collectionView.dequeueReusable(withCell: CompletedCheckInCell.self, for: indexPath)

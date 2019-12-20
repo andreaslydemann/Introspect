@@ -13,15 +13,15 @@ class PastCheckInCell: UICollectionViewCell {
         super.init(frame: frame)
         setupViews()
     }
-
+    
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override var isSelected: Bool {
         didSet { layer.opacity = isSelected ? 0.5 : 1 }
     }
-
+    
     let dayLabel: UILabel = {
         let label = UILabel()
         label.text = "22"
@@ -30,7 +30,7 @@ class PastCheckInCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-
+    
     let monthLabel: UILabel = {
         let label = UILabel()
         label.text = "Jan"
@@ -39,7 +39,7 @@ class PastCheckInCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-
+    
     let yearLabel: UILabel = {
         let label = UILabel()
         label.text = "2020"
@@ -49,7 +49,7 @@ class PastCheckInCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-
+    
     let ratingLabel: UILabel = {
         let label = UILabel()
         label.text = "Feeling good"
@@ -58,47 +58,53 @@ class PastCheckInCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-
+    
     let containerView: UIView = {
-        let backgroundView = UIView()
-
-        backgroundView.backgroundColor = .systemTeal
-        backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 2, height: backgroundView.frame.height + 2)
-        backgroundView.layer.cornerRadius = 4
-        backgroundView.layer.shadowRadius = 4
-        backgroundView.layer.shadowOpacity = 0.23
-        backgroundView.layer.shadowColor = UIColor.black.cgColor
-
-        return backgroundView
+        let containerView = UIView()
+        containerView.layer.shadowOffset = .init(width: containerView.frame.width + 2, height: containerView.frame.height + 2)
+        containerView.layer.cornerRadius = 4
+        containerView.layer.shadowRadius = 4
+        containerView.layer.shadowOpacity = 0.23
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.clipsToBounds = true
+        return containerView
     }()
-
-    private lazy var dateView: UIStackView = {
+    
+    lazy var backgroundImage: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "matteo-catanese.jpg")!)
+        imageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        imageView.frame = containerView.frame
+        return imageView
+    }()
+    
+    lazy var dateView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [dayLabel, monthLabel, yearLabel])
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         return stackView
     }()
-
+    
     func setupViews() {
-        containerView.addSubviews(dateView, ratingLabel)
         contentView.addSubview(containerView)
-
+        containerView.addSubview(backgroundImage)
+        backgroundImage.addSubviews(dateView, ratingLabel)
+        
         containerView.anchor(top: topAnchor,
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
                              padding: .init(top: 8, left: 4, bottom: 8, right: 4))
-
-        containerView.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
-
-        dateView.anchor(top: containerView.layoutMarginsGuide.topAnchor,
-                        leading: containerView.layoutMarginsGuide.leadingAnchor,
+        
+        backgroundImage.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
+        
+        dateView.anchor(top: backgroundImage.layoutMarginsGuide.topAnchor,
+                        leading: backgroundImage.layoutMarginsGuide.leadingAnchor,
                         bottom: nil,
                         trailing: nil)
-
+        
         ratingLabel.anchor(top: nil,
-                           leading: containerView.layoutMarginsGuide.leadingAnchor,
-                           bottom: containerView.layoutMarginsGuide.bottomAnchor,
-                           trailing: containerView.layoutMarginsGuide.trailingAnchor)
+                           leading: backgroundImage.layoutMarginsGuide.leadingAnchor,
+                           bottom: backgroundImage.layoutMarginsGuide.bottomAnchor,
+                           trailing: backgroundImage.layoutMarginsGuide.trailingAnchor)
     }
 }

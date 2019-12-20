@@ -33,7 +33,7 @@ class CheckInListViewControllerTests: XCTestCase {
 
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell?.dayLabel.text, "22")
-        // XCTAssertEqual(cell.monthLabel, "Jan")
+        XCTAssertEqual(cell?.monthLabel.text, "Jan")
     }
 
     // MARK: Helpers

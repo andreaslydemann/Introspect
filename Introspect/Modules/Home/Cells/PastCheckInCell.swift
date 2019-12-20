@@ -25,7 +25,8 @@ class PastCheckInCell: UICollectionViewCell {
     let dayLabel: UILabel = {
         let label = UILabel()
         label.text = "22"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()
@@ -33,7 +34,17 @@ class PastCheckInCell: UICollectionViewCell {
     let monthLabel: UILabel = {
         let label = UILabel()
         label.text = "Jan"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
+        label.textAlignment = .center
+        return label
+    }()
+
+    let ratingLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Feeling good"
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()
@@ -52,7 +63,7 @@ class PastCheckInCell: UICollectionViewCell {
     }()
 
     func setupViews() {
-        containerView.addSubviews(dayLabel, monthLabel)
+        containerView.addSubviews(dayLabel, monthLabel, ratingLabel)
         contentView.addSubview(containerView)
 
         containerView.anchor(top: topAnchor,
@@ -61,15 +72,22 @@ class PastCheckInCell: UICollectionViewCell {
                              trailing: trailingAnchor,
                              padding: .init(top: 8, left: 4, bottom: 8, right: 4))
 
-        dayLabel.anchor(top: containerView.topAnchor,
-                        leading: containerView.leadingAnchor,
-                        bottom: containerView.bottomAnchor,
-                        trailing: containerView.trailingAnchor)
+        containerView.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
 
-        monthLabel.anchor(top: dayLabel.bottomAnchor,
-                          leading: containerView.leadingAnchor,
+        dayLabel.anchor(top: containerView.layoutMarginsGuide.topAnchor,
+                        leading: containerView.layoutMarginsGuide.leadingAnchor,
+                        bottom: nil,
+                        trailing: nil)
+
+        monthLabel.anchor(top: dayLabel.topAnchor,
+                          leading: containerView.layoutMarginsGuide.leadingAnchor,
                           bottom: nil,
-                          trailing: containerView.trailingAnchor,
-                          padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+                          trailing: nil,
+                          padding: .init(top: 36, left: 0, bottom: 0, right: 0))
+
+        ratingLabel.anchor(top: nil,
+                           leading: containerView.layoutMarginsGuide.leadingAnchor,
+                           bottom: containerView.layoutMarginsGuide.bottomAnchor,
+                           trailing: containerView.layoutMarginsGuide.trailingAnchor)
     }
 }

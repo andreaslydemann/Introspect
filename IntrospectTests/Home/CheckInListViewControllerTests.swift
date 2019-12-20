@@ -28,7 +28,7 @@ class CheckInListViewControllerTests: XCTestCase {
         XCTAssertNotNil(makeSUT(checkIns: twoPastCheckIns).collectionView.cell(at: 0) as? CreateCheckInCell)
     }
 
-    func test_viewDidLoad_withCheckIns_configuresCompletedCell() {
+    func test_viewDidLoad_configuresCompletedCell() {
         let cell = makeSUT(checkIns: twoPastCheckIns).collectionView.cell(at: 1) as? PastCheckInCell
 
         XCTAssertNotNil(cell)

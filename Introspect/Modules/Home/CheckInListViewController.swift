@@ -11,7 +11,8 @@ import UI
 import UIKit
 
 protocol CheckInListViewControllerDelegate: AnyObject {
-    func didSelectCheckIn(_ userId: String, viewController: CheckInListViewController)
+    func didSelectCreateCheckIn(_ userId: String, viewController: CheckInListViewController)
+    func didSelectPastCheckIn(_ userId: String, viewController: CheckInListViewController)
 }
 
 struct CheckIn {
@@ -75,10 +76,18 @@ extension CheckInListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return section.configureCell(collectionView: collectionView, indexPath: indexPath)
     }
-
-    func collectionView(_: UICollectionView, didSelectItemAt _: IndexPath) {
-        delegate?.didSelectCheckIn("my user id", viewController: self)
-    }
 }
 
-extension CheckInListViewController: UICollectionViewDelegate {}
+extension CheckInListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+
+        if cell.isKind(of: CreateCheckInCell.self) {
+            delegate?.didSelectCreateCheckIn("my user id", viewController: self)
+        } else if cell.isKind(of: PastCheckInCell.self) {
+            delegate?.didSelectPastCheckIn("my user id", viewController: self)
+        } else {
+            fatalError("Unknown cell type received")
+        }
+    }
+}

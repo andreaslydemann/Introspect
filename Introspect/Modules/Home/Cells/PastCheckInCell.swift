@@ -62,7 +62,7 @@ class PastCheckInCell: UICollectionViewCell {
     let containerView: UIView = {
         let containerView = UIView()
         containerView.layer.shadowOffset = .init(width: containerView.frame.width + 2, height: containerView.frame.height + 2)
-        containerView.layer.cornerRadius = 4
+        containerView.layer.cornerRadius = 20
         containerView.layer.shadowRadius = 4
         containerView.layer.shadowOpacity = 0.23
         containerView.layer.shadowColor = UIColor.black.cgColor
@@ -93,7 +93,7 @@ class PastCheckInCell: UICollectionViewCell {
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
-                             padding: .init(top: 8, left: 4, bottom: 8, right: 4))
+                             padding: .init(top: 8, left: 8, bottom: 8, right: 8))
         
         backgroundImage.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
         

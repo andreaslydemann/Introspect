@@ -43,7 +43,7 @@ class CreateCheckInCell: UICollectionViewCell {
 
         backgroundView.backgroundColor = .systemTeal
         backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 2, height: backgroundView.frame.height + 2)
-        backgroundView.layer.cornerRadius = 4
+        backgroundView.layer.cornerRadius = 20
         backgroundView.layer.shadowRadius = 4
         backgroundView.layer.shadowOpacity = 0.23
         backgroundView.layer.shadowColor = UIColor.black.cgColor
@@ -59,7 +59,7 @@ class CreateCheckInCell: UICollectionViewCell {
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
-                             padding: .init(top: 8, left: 4, bottom: 8, right: 4))
+                             padding: .init(top: 8, left: 8, bottom: 8, right: 8))
 
         plusIcon.centerInSuperview(size: CGSize(width: 60, height: 60))
 

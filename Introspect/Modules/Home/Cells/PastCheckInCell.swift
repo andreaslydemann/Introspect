@@ -71,7 +71,7 @@ class PastCheckInCell: UICollectionViewCell {
     }()
     
     lazy var backgroundImage: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "matteo-catanese.jpg")!)
+        let imageView = UIImageView(image: R.image.matteoCatanese())
         imageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         imageView.frame = containerView.frame
         return imageView

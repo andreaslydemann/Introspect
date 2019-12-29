@@ -1,5 +1,4 @@
 name: CI
-# This workflow is triggered on pull requests.
 on:
   pull_request:
     branches:
@@ -12,9 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+
       - name: Validate branch name & run danger
         run: |
-          ../scripts/validate-branch-name.sh
+          sh ../scripts/validate-branch-name.sh
           #bundle exec danger
 
   test:
@@ -24,9 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+
       - name: Install dependencies
         run: sh bootstrap.sh
+
       - name: Unit tests
         run: bundle exec fastlane unit_test
+
       - name: UI tests
         run: bundle exec fastlane ui_test

@@ -21,7 +21,8 @@ jobs:
     needs: code_validation
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Install dependencies
         run: sh bootstrap.sh
       - name: Unit tests

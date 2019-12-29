@@ -14,10 +14,11 @@ jobs:
 
       - name: Validate branch name & run danger
         run: |
+          echo "$BRANCH_NAME"
           sh ./.github/scripts/validate-branch-name.sh
           #bundle exec danger
         env:
-          BRANCH_NAME: ${{ github.payload.pull_request.head.ref }}
+          BRANCH_NAME: ${{ toJson(github.payload.pull_request.head.ref) }}
 
   test:
     name: Run tests

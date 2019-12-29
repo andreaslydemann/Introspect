@@ -32,5 +32,5 @@ if [ -e "Gemfile" ]; then
 
   # install bundler gem for ruby dependency management
   gem install bundler --no-document || echo "failed to install bundle";
-  bundle install || echo "failed to install bundle";
+  bundle install --deployment || echo "failed to install bundle";
 fi

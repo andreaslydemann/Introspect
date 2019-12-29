@@ -29,7 +29,6 @@ jobs:
 
       - name: Code validation
         run: |
-          echo "$DANGER_GITHUB_API_TOKEN"
           sh ./.github/scripts/validate-branch-name.sh
           bundle exec danger
         env:

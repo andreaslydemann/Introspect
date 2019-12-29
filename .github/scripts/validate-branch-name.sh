@@ -1,6 +1,6 @@
 #!/bin/sh
 
-local_branch=$1
+local_branch=BRANCH_NAME
 
 valid_branch_regex="^(feature|fix|hotfix|release)\/[a-z0-9._-]+$"
 

@@ -5,23 +5,7 @@ on:
       - master
 
 jobs:
-  code_validation:
-    name: Code validation
-    runs-on: macOS-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Validate branch name & run danger
-        run: |
-          sh ./.github/scripts/validate-branch-name.sh
-          bundle exec danger
-        env:
-          BRANCH_NAME: ${{ github.head_ref }}
-
-  test:
-    name: Run tests
-    needs: code_validation
+  build:
     runs-on: macOS-latest
     steps:
       - name: Checkout
@@ -29,6 +13,13 @@ jobs:
 
       - name: Install dependencies
         run: sh bootstrap.sh
+
+      - name: Code validation
+        run: |
+          sh ./.github/scripts/validate-branch-name.sh
+          bundle exec danger
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
 
       - name: Unit tests
         run: bundle exec fastlane unit_test

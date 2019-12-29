@@ -11,7 +11,9 @@ jobs:
     needs: dependencies
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Validate branch name & run danger
         run: |
           ../scripts/validate-branch-name.sh
           #bundle exec danger

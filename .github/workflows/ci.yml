@@ -8,26 +8,26 @@ jobs:
   validate-and-test:
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - uses: actions/cache@v1
+      - name: Cache RubyGems
+        uses: actions/cache@v1
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gem-
-      - uses: actions/cache@v1
+
+      - name: Cache Mint dependencies
+        uses: actions/cache@v1
         with:
           path: /usr/local/lib/mint
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Mintfile') }}
-      - uses: actions/cache@v1
-        with:
-          path: /usr/local/bin
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Mintfile') }}
+          key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
 
-      - name: Dependencies
+      - name: Install dependencies
         run: sh ./bootstrap.sh
 
-      - name: Code validation
+      - name: Run code validation
         run: |
           sh ./.github/scripts/validate-branch-name.sh
           bundle exec danger
@@ -35,8 +35,8 @@ jobs:
           BRANCH_NAME: ${{ github.head_ref }}
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
-      - name: Unit tests
+      - name: Run unit tests
         run: bundle exec fastlane unit_test
 
-      - name: UI tests
+      - name: Run UI tests
         run: bundle exec fastlane ui_test

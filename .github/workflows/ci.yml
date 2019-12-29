@@ -1,0 +1,33 @@
+name: CI
+# This workflow is triggered on pull requests.
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  runs-on: macOS-latest
+  dependencies:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: sh bootstrap.sh
+
+  code_validation:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Code validation
+        run: |
+          ./scripts/validate-branch-name.sh
+          #bundle exec danger
+
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Unit tests
+        run: bundle exec fastlane unit_test
+      - name: UI tests
+        run: bundle exec fastlane ui_test

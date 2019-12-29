@@ -6,26 +6,24 @@ on:
       - master
 
 jobs:
-  dependencies:
+  code_validation:
+    name: Code validation
+    needs: dependencies
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+        run: |
+          ../scripts/validate-branch-name.sh
+          #bundle exec danger
+
+  test:
+    name: Run tests
+    needs: code_validation
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: sh bootstrap.sh
-
-  code_validation:
-    runs-on: macOS-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Code validation
-        run: |
-          ./scripts/validate-branch-name.sh
-          #bundle exec danger
-
-  test:
-    runs-on: macOS-latest
-    steps:
-      - uses: actions/checkout@v1
       - name: Unit tests
         run: bundle exec fastlane unit_test
       - name: UI tests

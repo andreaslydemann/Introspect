@@ -18,7 +18,7 @@ jobs:
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gem-
 
-      - name: Cache Mint dependencies
+      - name: Cache Mint packages
         uses: actions/cache@v1
         with:
           path: ~/usr/local/lib/mint

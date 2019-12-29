@@ -8,14 +8,27 @@ jobs:
   validate_and_test:
     runs-on: macOS-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gem-
+      - uses: actions/cache@v1
+        with:
+          path: /usr/local/lib/mint
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Mintfile') }}
+      - uses: actions/cache@v1
+        with:
+          path: /usr/local/bin
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Mintfile') }}
 
       - name: Dependencies
         run: sh ./bootstrap.sh
 
       - name: Code validation
         run: |
+          echo "$DANGER_GITHUB_API_TOKEN"
           sh ./.github/scripts/validate-branch-name.sh
           bundle exec danger
         env:

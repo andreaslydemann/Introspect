@@ -14,7 +14,7 @@ jobs:
 
       - name: Validate branch name & run danger
         run: |
-          sh ../scripts/validate-branch-name.sh
+          sh ./.github/scripts/validate-branch-name.sh
           #bundle exec danger
 
   test:

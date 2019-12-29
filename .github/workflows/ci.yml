@@ -21,8 +21,9 @@ jobs:
       - name: Cache Mint dependencies
         uses: actions/cache@v1
         with:
-          path: /usr/local/lib/mint
+          path: ~/usr/local/lib/mint
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
+          restore-keys: ${{ runner.os }}-mint-
 
       - name: Install dependencies
         run: sh ./bootstrap.sh

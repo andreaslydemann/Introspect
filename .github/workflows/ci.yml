@@ -8,6 +8,9 @@ jobs:
   validate_and_test:
     runs-on: macOS-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
       - name: Install dependencies
         run: sh ./bootstrap.sh
 

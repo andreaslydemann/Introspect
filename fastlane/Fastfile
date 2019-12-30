@@ -20,13 +20,8 @@ before_all do
 end
 
 platform :ios do
-  desc 'Runs the unit tests in IntrospectTests'
-  lane :unit_test do
-    scan(scheme: "IntrospectTests")
-  end
-
-  desc 'Runs the UI tests in IntrospectUITests'
-  lane :ui_test do
-    scan(scheme: "IntrospectUITests")
+  desc 'Runs the tests in Introspect'
+  lane :test do
+    scan(scheme: "Introspect")
   end
 end

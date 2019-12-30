@@ -21,7 +21,7 @@ jobs:
       - name: Cache Mint packages
         uses: actions/cache@v1
         with:
-          path: ~/usr/local/lib/mint
+          path: ${{ env.MINT_PATH }}
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
 
@@ -36,8 +36,7 @@ jobs:
           BRANCH_NAME: ${{ github.head_ref }}
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
-      - name: Run unit tests
-        run: bundle exec fastlane unit_test
-
-      - name: Run UI tests
-        run: bundle exec fastlane ui_test
+      - name: Run tests
+        run: bundle exec fastlane test
+    env:
+      MINT_PATH: ${{ github.workspace }}/mint

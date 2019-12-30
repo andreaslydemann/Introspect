@@ -21,14 +21,12 @@ jobs:
       - name: Cache Mint packages
         uses: actions/cache@v1
         with:
-          path: ${{ github.workspace }}/mint
+          path: ${{ env.MINT_PATH }}
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
 
       - name: Install dependencies
         run: sh ./bootstrap.sh
-        env:
-          MINT_PATH: ${{ github.workspace }}/mint
 
       - name: Run code validation
         run: |
@@ -40,3 +38,5 @@ jobs:
 
       - name: Run tests
         run: bundle exec fastlane test
+    env:
+          MINT_PATH: ${{ github.workspace }}/mint

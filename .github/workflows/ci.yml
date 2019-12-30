@@ -39,4 +39,4 @@ jobs:
       - name: Run tests
         run: bundle exec fastlane test
     env:
-          MINT_PATH: ${{ github.workspace }}/mint
+      MINT_PATH: ${{ github.workspace }}/mint

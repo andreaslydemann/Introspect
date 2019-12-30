@@ -36,8 +36,5 @@ jobs:
           BRANCH_NAME: ${{ github.head_ref }}
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
-      - name: Run unit tests
-        run: bundle exec fastlane unit_test
-
-      - name: Run UI tests
-        run: bundle exec fastlane ui_test
+      - name: Run tests
+        run: bundle exec fastlane test

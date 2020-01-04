@@ -11,7 +11,6 @@ import UIKit
 
 protocol Section {
     var numberOfItems: Int { get }
-    func layoutSection() -> NSCollectionLayoutSection
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
 }
 
@@ -25,19 +24,6 @@ struct CheckInSection: Section {
 
     init(checkIns: [CheckIn]) {
         self.checkIns = checkIns
-    }
-
-    func layoutSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(0.8))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPagingCentered
-
-        return section
     }
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {

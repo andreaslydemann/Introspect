@@ -33,16 +33,8 @@ final class CheckInListViewController: UIViewController {
         setupViews()
     }
 
-    lazy var collectionViewLayout: UICollectionViewLayout = {
-        var section = self.section
-        let layout = UICollectionViewCompositionalLayout { (_, _) -> NSCollectionLayoutSection? in
-            section.layoutSection()
-        }
-        return layout
-    }()
-
     lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CarouselFlowLayout())
         collectionView.backgroundColor = .systemBackground
         collectionView.delaysContentTouches = false
 

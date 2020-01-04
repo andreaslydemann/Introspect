@@ -93,7 +93,7 @@ class PastCheckInCell: UICollectionViewCell {
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
-                             padding: .init(top: 8, left: 8, bottom: 8, right: 8))
+                             padding: .init(top: 8, left: 0, bottom: 8, right: 0))
         
         backgroundImage.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
         

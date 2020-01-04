@@ -35,6 +35,8 @@ final class CheckInListViewController: UIViewController {
 
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CarouselFlowLayout())
+        collectionView.decelerationRate = .fast
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .systemBackground
         collectionView.delaysContentTouches = false
 

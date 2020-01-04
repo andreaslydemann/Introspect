@@ -1,14 +1,6 @@
-//
-//  PageCollectionLayout.swift
-//  Introspect
-//
-//  Created by Andreas Lüdemann on 04/01/2020.
-//  Copyright © 2020 Andreas Lüdemann. All rights reserved.
-//
-
 import UIKit
 
-class PageCollectionLayout: UICollectionViewFlowLayout {
+open class PageCollectionLayout: UICollectionViewFlowLayout {
     
     fileprivate var lastCollectionViewSize: CGSize = CGSize.zero
     
@@ -17,12 +9,12 @@ class PageCollectionLayout: UICollectionViewFlowLayout {
     var minimumAlphaFactor: CGFloat = 0.3
     var scaleItems: Bool            = true
     
-    init(itemSize: CGSize) {
+    public init(itemSize: CGSize) {
         super.init()
         commonInit(itemSize)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -42,7 +34,7 @@ extension PageCollectionLayout {
 
 extension PageCollectionLayout {
     
-    override func invalidateLayout(with context: UICollectionViewLayoutInvalidationContext) {
+    public override func invalidateLayout(with context: UICollectionViewLayoutInvalidationContext) {
         super.invalidateLayout(with: context)
         
         guard let collectionView = self.collectionView else { return }
@@ -53,7 +45,7 @@ extension PageCollectionLayout {
         }
     }
     
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         guard let collectionView = self.collectionView else {
             return proposedContentOffset
         }
@@ -96,11 +88,11 @@ extension PageCollectionLayout {
         return CGPoint(x: newOffsetX, y: proposedContentOffset.y)
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let collectionView = self.collectionView,
             let superAttributes = super.layoutAttributesForElements(in: rect) else {
                 return super.layoutAttributesForElements(in: rect)

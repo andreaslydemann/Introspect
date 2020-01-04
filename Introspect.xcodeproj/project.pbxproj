@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */; };
-		8E1ABB6D23C0A9360060C8DF /* PageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ABB6C23C0A9360060C8DF /* PageCollectionLayout.swift */; };
 		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */; };
 		8E949AA623AB3A9E00476855 /* CheckInSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* CheckInSection.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlow.swift; sourceTree = "<group>"; };
-		8E1ABB6C23C0A9360060C8DF /* PageCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionLayout.swift; sourceTree = "<group>"; };
 		8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewControllerTests.swift; sourceTree = "<group>"; };
 		8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		8E949AA523AB3A9E00476855 /* CheckInSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSection.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		8E1ABB6923C0A8EC0060C8DF /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				8E1ABB6C23C0A9360060C8DF /* PageCollectionLayout.swift */,
 				8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */,
 			);
 			path = Flow;
@@ -444,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1ABB6D23C0A9360060C8DF /* PageCollectionLayout.swift in Sources */,
 				8ED0C64723AA07B400DAAB34 /* CreateCheckInCell.swift in Sources */,
 				8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */,
 				8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */,

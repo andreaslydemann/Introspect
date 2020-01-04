@@ -6,7 +6,7 @@
 //  Copyright © 2020 Andreas Lüdemann. All rights reserved.
 //
 
-import Foundation
+import UI
 import CoreGraphics
 
 class CarouselFlowLayout: PageCollectionLayout {
@@ -15,14 +15,14 @@ class CarouselFlowLayout: PageCollectionLayout {
         return CGSize(width: 300, height: 500)
     }
     
-    override init(itemSize: CGSize = CarouselFlowLayout.cellSize) {
+    override public init(itemSize: CGSize = CarouselFlowLayout.cellSize) {
         super.init(itemSize: itemSize)
-        scrollDirection = .horizontal
+        //scrollDirection = .horizontal
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         itemSize = CarouselFlowLayout.cellSize
-        scrollDirection = .horizontal
+        //scrollDirection = .horizontal
     }
 }

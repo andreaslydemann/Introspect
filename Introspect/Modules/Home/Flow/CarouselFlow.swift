@@ -7,7 +7,7 @@
 //
 
 import UI
-import CoreGraphics
+import UIKit
 
 class CarouselFlowLayout: PageCollectionLayout {
     

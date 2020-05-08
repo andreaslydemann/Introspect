@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */; };
-		8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */; };
+		8E7E7F0123A93F4300555D65 /* ReflectionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */; };
-		8E949AA623AB3A9E00476855 /* CheckInSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* CheckInSection.swift */; };
+		8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* ReflectionSection.swift */; };
 		8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */; };
 		8ED0C63C23A9F60200DAAB34 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */; };
 		8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C64223A9F8F800DAAB34 /* DateHelper */; };
-		8ED0C64723AA07B400DAAB34 /* CreateCheckInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */; };
+		8ED0C64723AA07B400DAAB34 /* NewReflectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C64623AA07B400DAAB34 /* NewReflectionCell.swift */; };
 		8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5BFD223A687E6009D98A4 /* R.generated.swift */; };
-		8EDB016023AA984C0032BEFA /* PastCheckInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB015F23AA984C0032BEFA /* PastCheckInCell.swift */; };
+		8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB015F23AA984C0032BEFA /* PastReflectionCell.swift */; };
 		8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67723970303002C6EA3 /* AppDelegate.swift */; };
 		8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67923970303002C6EA3 /* SceneDelegate.swift */; };
-		8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */; };
+		8EDCD67C23970303002C6EA3 /* ReflectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */; };
 		8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD68023970303002C6EA3 /* Introspect.xcdatamodeld */; };
 		8EDCD68423970306002C6EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD68323970306002C6EA3 /* Assets.xcassets */; };
 		8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD68523970306002C6EA3 /* LaunchScreen.storyboard */; };
@@ -51,17 +51,17 @@
 
 /* Begin PBXFileReference section */
 		8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlow.swift; sourceTree = "<group>"; };
-		8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewControllerTests.swift; sourceTree = "<group>"; };
+		8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionListViewControllerTests.swift; sourceTree = "<group>"; };
 		8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
-		8E949AA523AB3A9E00476855 /* CheckInSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSection.swift; sourceTree = "<group>"; };
+		8E949AA523AB3A9E00476855 /* ReflectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionSection.swift; sourceTree = "<group>"; };
 		8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
-		8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckInCell.swift; sourceTree = "<group>"; };
+		8ED0C64623AA07B400DAAB34 /* NewReflectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReflectionCell.swift; sourceTree = "<group>"; };
 		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		8EDB015F23AA984C0032BEFA /* PastCheckInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastCheckInCell.swift; sourceTree = "<group>"; };
+		8EDB015F23AA984C0032BEFA /* PastReflectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastReflectionCell.swift; sourceTree = "<group>"; };
 		8EDCD67423970303002C6EA3 /* Introspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Introspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD67723970303002C6EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EDCD67923970303002C6EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInListViewController.swift; sourceTree = "<group>"; };
+		8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionListViewController.swift; sourceTree = "<group>"; };
 		8EDCD68123970303002C6EA3 /* Introspect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Introspect.xcdatamodel; sourceTree = "<group>"; };
 		8EDCD68323970306002C6EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EDCD68623970306002C6EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */,
-				8E7E7F0023A93F4300555D65 /* CheckInListViewControllerTests.swift */,
+				8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -134,8 +134,8 @@
 		8E949AA723AB420000476855 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8ED0C64623AA07B400DAAB34 /* CreateCheckInCell.swift */,
-				8EDB015F23AA984C0032BEFA /* PastCheckInCell.swift */,
+				8ED0C64623AA07B400DAAB34 /* NewReflectionCell.swift */,
+				8EDB015F23AA984C0032BEFA /* PastReflectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -218,8 +218,8 @@
 				8E1ABB6923C0A8EC0060C8DF /* Flow */,
 				8E949AA723AB420000476855 /* Cells */,
 				8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */,
-				8EDCD67B23970303002C6EA3 /* CheckInListViewController.swift */,
-				8E949AA523AB3A9E00476855 /* CheckInSection.swift */,
+				8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */,
+				8E949AA523AB3A9E00476855 /* ReflectionSection.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -441,15 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED0C64723AA07B400DAAB34 /* CreateCheckInCell.swift in Sources */,
-				8EDCD67C23970303002C6EA3 /* CheckInListViewController.swift in Sources */,
+				8ED0C64723AA07B400DAAB34 /* NewReflectionCell.swift in Sources */,
+				8EDCD67C23970303002C6EA3 /* ReflectionListViewController.swift in Sources */,
 				8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
 				8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */,
 				8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */,
-				8E949AA623AB3A9E00476855 /* CheckInSection.swift in Sources */,
-				8EDB016023AA984C0032BEFA /* PastCheckInCell.swift in Sources */,
+				8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */,
+				8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7E7F0123A93F4300555D65 /* CheckInListViewControllerTests.swift in Sources */,
+				8E7E7F0123A93F4300555D65 /* ReflectionListViewControllerTests.swift in Sources */,
 				8ED0C63C23A9F60200DAAB34 /* UICollectionView+Ext.swift in Sources */,
 				8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */,
 			);

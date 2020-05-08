@@ -1,5 +1,5 @@
 //
-//  CompletedCheckInCell.swift
+//  CompletedReflectionCell.swift
 //  Introspect
 //
 //  Created by Andreas Lüdemann on 18/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PastCheckInCell: UICollectionViewCell {
+class PastReflectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

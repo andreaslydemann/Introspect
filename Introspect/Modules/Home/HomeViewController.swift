@@ -33,8 +33,8 @@ class HomeViewController: UIViewController {
         return label
     }()
 
-    private let checkInListViewController = CheckInListViewController(checkIns: [CheckIn(date: Date(fromString: "2001-01-01", format: .isoDate)!),
-                                                                                 CheckIn(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
+    private let reflectionListViewController = ReflectionListViewController(reflections: [Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!),
+                                                                                 Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
 
     private let reportButton: UIButton = {
         let button = UIButton(type: .system)
@@ -57,24 +57,24 @@ class HomeViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .systemBackground
 
-        view.addSubviews(greetingLabel, checkInListViewController.view, footerView)
-        addChild(checkInListViewController)
+        view.addSubviews(greetingLabel, reflectionListViewController.view, footerView)
+        addChild(reflectionListViewController)
 
-        checkInListViewController.delegate = self
+        reflectionListViewController.delegate = self
 
         greetingLabel.anchor(top: view.topAnchor,
                              leading: view.layoutMarginsGuide.leadingAnchor,
-                             bottom: checkInListViewController.view.topAnchor,
+                             bottom: reflectionListViewController.view.topAnchor,
                              trailing: view.layoutMarginsGuide.trailingAnchor,
                              padding: .init(top: 100, left: 0, bottom: 15, right: 0))
 
-        checkInListViewController.view.anchor(top: greetingLabel.bottomAnchor,
+        reflectionListViewController.view.anchor(top: greetingLabel.bottomAnchor,
                                               leading: view.leadingAnchor,
                                               bottom: nil,
                                               trailing: view.trailingAnchor,
                                               padding: .init(top: 15, left: 0, bottom: 15, right: 0))
 
-        footerView.anchor(top: checkInListViewController.view.bottomAnchor,
+        footerView.anchor(top: reflectionListViewController.view.bottomAnchor,
                           leading: view.layoutMarginsGuide.leadingAnchor,
                           bottom: view.safeAreaLayoutGuide.bottomAnchor,
                           trailing: view.layoutMarginsGuide.trailingAnchor,
@@ -87,12 +87,12 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: CheckInListViewControllerDelegate {
-    public func didSelectCreateCheckIn(_ userId: String, viewController _: CheckInListViewController) {
-        print("Create check in selected")
+extension HomeViewController: ReflectionListViewControllerDelegate {
+    public func didSelectNewReflection(_ userId: String, viewController _: ReflectionListViewController) {
+        print("New reflection selected")
     }
 
-    public func didSelectPastCheckIn(_ userId: String, viewController _: CheckInListViewController) {
-        print("Past check in selected")
+    public func didSelectPastReflection(_ userId: String, viewController _: ReflectionListViewController) {
+        print("Past reflection selected")
     }
 }

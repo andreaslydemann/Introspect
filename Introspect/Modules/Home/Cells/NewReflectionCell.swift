@@ -1,5 +1,5 @@
 //
-//  CreateCheckInCell.swift
+//  NewReflectionCell.swift
 //  Introspect
 //
 //  Created by Andreas Lüdemann on 18/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateCheckInCell: UICollectionViewCell {
+class NewReflectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -31,7 +31,7 @@ class CreateCheckInCell: UICollectionViewCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Add check-in"
+        label.text = "Add reflection"
         label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center

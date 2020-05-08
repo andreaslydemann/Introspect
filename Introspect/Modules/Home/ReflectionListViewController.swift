@@ -10,22 +10,22 @@ import DateHelper
 import UI
 import UIKit
 
-protocol CheckInListViewControllerDelegate: AnyObject {
-    func didSelectCreateCheckIn(_ userId: String, viewController: CheckInListViewController)
-    func didSelectPastCheckIn(_ userId: String, viewController: CheckInListViewController)
+protocol ReflectionListViewControllerDelegate: AnyObject {
+    func didSelectNewReflection(_ userId: String, viewController: ReflectionListViewController)
+    func didSelectPastReflection(_ userId: String, viewController: ReflectionListViewController)
 }
 
-struct CheckIn {
+struct Reflection {
     let date: Date
 }
 
-final class CheckInListViewController: UIViewController {
-    weak var delegate: CheckInListViewControllerDelegate?
-    private var checkIns: [CheckIn] = []
+final class ReflectionListViewController: UIViewController {
+    weak var delegate: ReflectionListViewControllerDelegate?
+    private var reflections: [Reflection] = []
 
-    convenience init(checkIns: [CheckIn]) {
+    convenience init(reflections: [Reflection]) {
         self.init()
-        self.checkIns = checkIns
+        self.reflections = reflections
     }
 
     override func viewDidLoad() {
@@ -43,13 +43,13 @@ final class CheckInListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        collectionView.register(CreateCheckInCell.self)
-        collectionView.register(PastCheckInCell.self)
+        collectionView.register(NewReflectionCell.self)
+        collectionView.register(PastReflectionCell.self)
 
         return collectionView
     }()
 
-    lazy var section: Section = CheckInSection(checkIns: checkIns)
+    lazy var section: Section = ReflectionSection(reflections: reflections)
 
     func setupViews() {
         view.addSubview(collectionView)
@@ -62,7 +62,7 @@ final class CheckInListViewController: UIViewController {
     }
 }
 
-extension CheckInListViewController: UICollectionViewDataSource {
+extension ReflectionListViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return section.numberOfItems
     }
@@ -72,14 +72,14 @@ extension CheckInListViewController: UICollectionViewDataSource {
     }
 }
 
-extension CheckInListViewController: UICollectionViewDelegate {
+extension ReflectionListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else { return }
 
-        if cell.isKind(of: CreateCheckInCell.self) {
-            delegate?.didSelectCreateCheckIn("my user id", viewController: self)
-        } else if cell.isKind(of: PastCheckInCell.self) {
-            delegate?.didSelectPastCheckIn("my user id", viewController: self)
+        if cell.isKind(of: NewReflectionCell.self) {
+            delegate?.didSelectNewReflection("my user id", viewController: self)
+        } else if cell.isKind(of: PastReflectionCell.self) {
+            delegate?.didSelectPastReflection("my user id", viewController: self)
         } else {
             fatalError("Unknown cell type received")
         }

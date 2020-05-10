@@ -19,7 +19,6 @@
 		8E42F5C52468B5D300115E83 /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B52468B5D300115E83 /* kick.wav */; };
 		8E42F5C62468B5D300115E83 /* snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B62468B5D300115E83 /* snare.wav */; };
 		8E42F5C72468B5D300115E83 /* CheckboxAnimation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */; };
-		8E42F5C82468B5D300115E83 /* FinniversImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */; };
 		8E42F5C92468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BA2468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf */; };
 		8E42F5CA2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BB2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf */; };
 		8E42F5CB2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BC2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf */; };
@@ -78,7 +77,6 @@
 		8E42F5B52468B5D300115E83 /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
 		8E42F5B62468B5D300115E83 /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snare.wav; sourceTree = "<group>"; };
 		8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CheckboxAnimation.xcassets; sourceTree = "<group>"; };
-		8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinniversImageAsset.swift; sourceTree = "<group>"; };
 		8E42F5BA2468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Light.ttf"; sourceTree = "<group>"; };
 		8E42F5BB2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Medium.ttf"; sourceTree = "<group>"; };
 		8E42F5BC2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Regular.ttf"; sourceTree = "<group>"; };
@@ -165,12 +163,11 @@
 		8E42F5AC2468B5D300115E83 /* FinniversKit */ = {
 			isa = PBXGroup;
 			children = (
-				8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */,
 				8E42F5AE2468B5D300115E83 /* Assets.xcassets */,
 				8E42F5AF2468B5D300115E83 /* Icons.xcassets */,
-				8E42F5B02468B5D300115E83 /* Sounds */,
+				8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */,
 				8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */,
-				8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */,
+				8E42F5B02468B5D300115E83 /* Sounds */,
 				8E42F5B92468B5D300115E83 /* Fonts */,
 			);
 			path = FinniversKit;
@@ -554,7 +551,6 @@
 				8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */,
 				8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
-				8E42F5C82468B5D300115E83 /* FinniversImageAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

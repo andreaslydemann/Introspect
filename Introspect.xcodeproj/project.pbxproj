@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */; };
 		8E42F5912465CAAF00115E83 /* MoodRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42F5902465CAAF00115E83 /* MoodRatingViewController.swift */; };
-		8E42F59924687E4300115E83 /* Material in Frameworks */ = {isa = PBXBuildFile; productRef = 8E42F59824687E4300115E83 /* Material */; };
 		8E42F5BE2468B5D300115E83 /* RadiobuttonAnimation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */; };
 		8E42F5BF2468B5D300115E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AE2468B5D300115E83 /* Assets.xcassets */; };
 		8E42F5C02468B5D300115E83 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AF2468B5D300115E83 /* Icons.xcassets */; };
@@ -117,7 +116,6 @@
 				8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */,
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
 				8EE6D20B23A682080080C060 /* Rswift in Frameworks */,
-				8E42F59924687E4300115E83 /* Material in Frameworks */,
 				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
 				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
@@ -347,7 +345,6 @@
 				8EE6D20A23A682080080C060 /* Rswift */,
 				8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */,
 				8ED0C64223A9F8F800DAAB34 /* DateHelper */,
-				8E42F59824687E4300115E83 /* Material */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -429,7 +426,6 @@
 				8EE6D20923A682080080C060 /* XCRemoteSwiftPackageReference "R.swift" */,
 				8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				8ED0C64123A9F8F800DAAB34 /* XCRemoteSwiftPackageReference "DateHelper" */,
-				8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */,
 			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
@@ -887,14 +883,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CosmicMind/Material.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.8;
-			};
-		};
 		8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/piknotech/SFSafeSymbols.git";
@@ -938,11 +926,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E42F59824687E4300115E83 /* Material */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */;
-			productName = Material;
-		};
 		8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;

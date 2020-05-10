@@ -11,24 +11,6 @@
         }
       },
       {
-        "package": "Material",
-        "repositoryURL": "https://github.com/CosmicMind/Material.git",
-        "state": {
-          "branch": null,
-          "revision": "059ed9c336d24b5f6383bec0346ae7c314724120",
-          "version": "3.1.8"
-        }
-      },
-      {
-        "package": "Motion",
-        "repositoryURL": "https://github.com/CosmicMind/Motion.git",
-        "state": {
-          "branch": null,
-          "revision": "808ac0cf1b67c5e4163ee867dd6c056836fcbc58",
-          "version": "3.1.3"
-        }
-      },
-      {
         "package": "R.swift.Library",
         "repositoryURL": "https://github.com/mac-cain13/R.swift.Library",
         "state": {

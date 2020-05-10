@@ -349,7 +349,7 @@ public enum FinniversImageAsset: String {
             .viewMode,
             .webview,
             .wrench,
-            .yourads,
+            .yourads
     ]
   }
 }

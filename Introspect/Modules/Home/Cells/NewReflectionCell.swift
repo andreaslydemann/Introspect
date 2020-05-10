@@ -18,10 +18,6 @@ class NewReflectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override var isSelected: Bool {
-        didSet { layer.opacity = isSelected ? 0.5 : 1 }
-    }
-
     let plusIcon: UIImageView = {
         let image = UIImage(systemName: "plus")
         let imageView = UIImageView(image: image)

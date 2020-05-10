@@ -9,6 +9,7 @@
 import SFSafeSymbols
 import UI
 import UIKit
+import SwiftUI
 
 struct User {
     let name: String
@@ -89,6 +90,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: ReflectionListViewControllerDelegate {
     public func didSelectNewReflection(_ userId: String, viewController _: ReflectionListViewController) {
+        
+        // TODO: Should use a navigator
+        
+        let vc = MoodRatingViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        self.navigationController?.present(nc, animated: true, completion: nil)
+        
         print("New reflection selected")
     }
 

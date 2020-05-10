@@ -18,10 +18,6 @@ class PastReflectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var isSelected: Bool {
-        didSet { layer.opacity = isSelected ? 0.5 : 1 }
-    }
-    
     let dayLabel: UILabel = {
         let label = UILabel()
         label.text = "22"

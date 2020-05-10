@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */; };
+		8E42F5912465CAAF00115E83 /* MoodRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42F5902465CAAF00115E83 /* MoodRatingViewController.swift */; };
+		8E42F59924687E4300115E83 /* Material in Frameworks */ = {isa = PBXBuildFile; productRef = 8E42F59824687E4300115E83 /* Material */; };
+		8E42F5BE2468B5D300115E83 /* RadiobuttonAnimation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */; };
+		8E42F5BF2468B5D300115E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AE2468B5D300115E83 /* Assets.xcassets */; };
+		8E42F5C02468B5D300115E83 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5AF2468B5D300115E83 /* Icons.xcassets */; };
+		8E42F5C12468B5D300115E83 /* Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B12468B5D300115E83 /* Piano.sf2 */; };
+		8E42F5C22468B5D300115E83 /* hi-hats.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B22468B5D300115E83 /* hi-hats.wav */; };
+		8E42F5C32468B5D300115E83 /* pusefinn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B32468B5D300115E83 /* pusefinn.wav */; };
+		8E42F5C42468B5D300115E83 /* sleighbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B42468B5D300115E83 /* sleighbell.mp3 */; };
+		8E42F5C52468B5D300115E83 /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B52468B5D300115E83 /* kick.wav */; };
+		8E42F5C62468B5D300115E83 /* snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B62468B5D300115E83 /* snare.wav */; };
+		8E42F5C72468B5D300115E83 /* CheckboxAnimation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */; };
+		8E42F5C82468B5D300115E83 /* FinniversImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */; };
+		8E42F5C92468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BA2468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf */; };
+		8E42F5CA2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BB2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf */; };
+		8E42F5CB2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BC2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf */; };
+		8E42F5CC2468B5D300115E83 /* FINNTypeWebStrippet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E42F5BD2468B5D300115E83 /* FINNTypeWebStrippet-Bold.ttf */; };
 		8E7E7F0123A93F4300555D65 /* ReflectionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */; };
 		8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* ReflectionSection.swift */; };
@@ -51,6 +68,22 @@
 
 /* Begin PBXFileReference section */
 		8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlow.swift; sourceTree = "<group>"; };
+		8E42F5902465CAAF00115E83 /* MoodRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRatingViewController.swift; sourceTree = "<group>"; };
+		8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RadiobuttonAnimation.xcassets; sourceTree = "<group>"; };
+		8E42F5AE2468B5D300115E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E42F5AF2468B5D300115E83 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		8E42F5B12468B5D300115E83 /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
+		8E42F5B22468B5D300115E83 /* hi-hats.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hi-hats.wav"; sourceTree = "<group>"; };
+		8E42F5B32468B5D300115E83 /* pusefinn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pusefinn.wav; sourceTree = "<group>"; };
+		8E42F5B42468B5D300115E83 /* sleighbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleighbell.mp3; sourceTree = "<group>"; };
+		8E42F5B52468B5D300115E83 /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
+		8E42F5B62468B5D300115E83 /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snare.wav; sourceTree = "<group>"; };
+		8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CheckboxAnimation.xcassets; sourceTree = "<group>"; };
+		8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinniversImageAsset.swift; sourceTree = "<group>"; };
+		8E42F5BA2468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Light.ttf"; sourceTree = "<group>"; };
+		8E42F5BB2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Medium.ttf"; sourceTree = "<group>"; };
+		8E42F5BC2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Regular.ttf"; sourceTree = "<group>"; };
+		8E42F5BD2468B5D300115E83 /* FINNTypeWebStrippet-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FINNTypeWebStrippet-Bold.ttf"; sourceTree = "<group>"; };
 		8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionListViewControllerTests.swift; sourceTree = "<group>"; };
 		8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		8E949AA523AB3A9E00476855 /* ReflectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionSection.swift; sourceTree = "<group>"; };
@@ -84,6 +117,7 @@
 				8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */,
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
 				8EE6D20B23A682080080C060 /* Rswift in Frameworks */,
+				8E42F59924687E4300115E83 /* Material in Frameworks */,
 				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
 				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
@@ -114,9 +148,64 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		8E42F58F2465CA7D00115E83 /* CreateReflection */ = {
+			isa = PBXGroup;
+			children = (
+				8E42F5922466BCE600115E83 /* MoodRating */,
+			);
+			path = CreateReflection;
+			sourceTree = "<group>";
+		};
+		8E42F5922466BCE600115E83 /* MoodRating */ = {
+			isa = PBXGroup;
+			children = (
+				8E42F5902465CAAF00115E83 /* MoodRatingViewController.swift */,
+			);
+			path = MoodRating;
+			sourceTree = "<group>";
+		};
+		8E42F5AC2468B5D300115E83 /* FinniversKit */ = {
+			isa = PBXGroup;
+			children = (
+				8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */,
+				8E42F5AE2468B5D300115E83 /* Assets.xcassets */,
+				8E42F5AF2468B5D300115E83 /* Icons.xcassets */,
+				8E42F5B02468B5D300115E83 /* Sounds */,
+				8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */,
+				8E42F5B82468B5D300115E83 /* FinniversImageAsset.swift */,
+				8E42F5B92468B5D300115E83 /* Fonts */,
+			);
+			path = FinniversKit;
+			sourceTree = "<group>";
+		};
+		8E42F5B02468B5D300115E83 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8E42F5B12468B5D300115E83 /* Piano.sf2 */,
+				8E42F5B22468B5D300115E83 /* hi-hats.wav */,
+				8E42F5B32468B5D300115E83 /* pusefinn.wav */,
+				8E42F5B42468B5D300115E83 /* sleighbell.mp3 */,
+				8E42F5B52468B5D300115E83 /* kick.wav */,
+				8E42F5B62468B5D300115E83 /* snare.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		8E42F5B92468B5D300115E83 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E42F5BA2468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf */,
+				8E42F5BB2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf */,
+				8E42F5BC2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf */,
+				8E42F5BD2468B5D300115E83 /* FINNTypeWebStrippet-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8E7E7EFE23A7E39C00555D65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8E42F58F2465CA7D00115E83 /* CreateReflection */,
 				8EDCD6B023978486002C6EA3 /* Home */,
 			);
 			path = Modules;
@@ -151,6 +240,7 @@
 		8ED5BFD123A6855C009D98A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E42F5AC2468B5D300115E83 /* FinniversKit */,
 				8ED5BFD223A687E6009D98A4 /* R.generated.swift */,
 				8EDCD68323970306002C6EA3 /* Assets.xcassets */,
 				8EDCD68523970306002C6EA3 /* LaunchScreen.storyboard */,
@@ -257,6 +347,7 @@
 				8EE6D20A23A682080080C060 /* Rswift */,
 				8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */,
 				8ED0C64223A9F8F800DAAB34 /* DateHelper */,
+				8E42F59824687E4300115E83 /* Material */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -338,6 +429,7 @@
 				8EE6D20923A682080080C060 /* XCRemoteSwiftPackageReference "R.swift" */,
 				8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				8ED0C64123A9F8F800DAAB34 /* XCRemoteSwiftPackageReference "DateHelper" */,
+				8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */,
 			);
 			productRefGroup = 8EDCD67523970303002C6EA3 /* Products */;
 			projectDirPath = "";
@@ -355,9 +447,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E42F5CB2468B5D300115E83 /* FINNTypeWebStrippet-Regular.ttf in Resources */,
+				8E42F5CC2468B5D300115E83 /* FINNTypeWebStrippet-Bold.ttf in Resources */,
+				8E42F5C12468B5D300115E83 /* Piano.sf2 in Resources */,
+				8E42F5BE2468B5D300115E83 /* RadiobuttonAnimation.xcassets in Resources */,
 				8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */,
 				8EDCD6B22397884B002C6EA3 /* UI in Resources */,
+				8E42F5CA2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf in Resources */,
+				8E42F5C32468B5D300115E83 /* pusefinn.wav in Resources */,
 				8EDCD68423970306002C6EA3 /* Assets.xcassets in Resources */,
+				8E42F5C22468B5D300115E83 /* hi-hats.wav in Resources */,
+				8E42F5C02468B5D300115E83 /* Icons.xcassets in Resources */,
+				8E42F5BF2468B5D300115E83 /* Assets.xcassets in Resources */,
+				8E42F5C42468B5D300115E83 /* sleighbell.mp3 in Resources */,
+				8E42F5C62468B5D300115E83 /* snare.wav in Resources */,
+				8E42F5C72468B5D300115E83 /* CheckboxAnimation.xcassets in Resources */,
+				8E42F5C92468B5D300115E83 /* FINNTypeWebStrippet-Light.ttf in Resources */,
+				8E42F5C52468B5D300115E83 /* kick.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +549,7 @@
 			files = (
 				8ED0C64723AA07B400DAAB34 /* NewReflectionCell.swift in Sources */,
 				8EDCD67C23970303002C6EA3 /* ReflectionListViewController.swift in Sources */,
+				8E42F5912465CAAF00115E83 /* MoodRatingViewController.swift in Sources */,
 				8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
@@ -451,6 +558,7 @@
 				8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */,
 				8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
+				8E42F5C82468B5D300115E83 /* FinniversImageAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +887,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CosmicMind/Material.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 		8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/piknotech/SFSafeSymbols.git";
@@ -822,6 +938,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E42F59824687E4300115E83 /* Material */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E42F59724687E4300115E83 /* XCRemoteSwiftPackageReference "Material" */;
+			productName = Material;
+		};
 		8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;

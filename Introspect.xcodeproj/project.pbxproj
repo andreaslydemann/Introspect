@@ -240,6 +240,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8EA4ECA62469EED800EE6421 /* ReflectionList */ = {
+			isa = PBXGroup;
+			children = (
+				8E949AA723AB420000476855 /* Cells */,
+				8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */,
+				8E949AA523AB3A9E00476855 /* ReflectionSection.swift */,
+				8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */,
+			);
+			path = ReflectionList;
+			sourceTree = "<group>";
+		};
 		8ECDA24D24699D8100E21E22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,11 +350,8 @@
 		8EDCD6B023978486002C6EA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8E949AA723AB420000476855 /* Cells */,
+				8EA4ECA62469EED800EE6421 /* ReflectionList */,
 				8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */,
-				8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */,
-				8E949AA523AB3A9E00476855 /* ReflectionSection.swift */,
-				8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

@@ -9,11 +9,12 @@
 import Swinject
 import SwinjectAutoregistration
 import UIKit
+import FinniversKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     private let container = Swinject.Container()
-
+    
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         registerServices(container: container)
 
@@ -24,8 +25,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window.windowScene = windowScene
 
-        let navigationController = UINavigationController(rootViewController: container.resolve(HomeViewController.self)!)
+        let navigationController = NavigationController(rootViewController: container.resolve(HomeViewController.self)!)
         navigationController.setNavigationBarHidden(true, animated: false)
+        
+        //let userInterfaceStyle = UserInterfaceStyle(rawValue: UserDefaults.standard.integer(forKey: State.currentUserInterfaceStyleKey))
+        let userInterfaceStyle = UserInterfaceStyle(rawValue: 2)
+        
+        FinniversKit.userInterfaceStyleSupport = userInterfaceStyle == .dark ? .forceDark : .forceLight
+        
+        if #available(iOS 13.0, *) {
+            window.setWindowUserInterfaceStyle(userInterfaceStyle)
+        }
 
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

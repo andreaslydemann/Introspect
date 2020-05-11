@@ -8,6 +8,7 @@
 
 import SFSafeSymbols
 import UIKit
+import FinniversKit
 
 class HomeViewController: UIViewController {
     private var user: User?
@@ -17,19 +18,18 @@ class HomeViewController: UIViewController {
         self.user = user
     }
 
-    lazy var greetingLabel: UILabel = {
-        let label = UILabel()
+    lazy var greetingLabel: Label = {
+        let label = Label(style: .title1)
 
         guard let user = user else { fatalError("No user was passed") }
-
         label.text = user.name.isEmpty ? "" : "Hi, " + user.name
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
-        label.adjustsFontForContentSizeCategory = true
+        
         return label
     }()
 
-    private let reflectionListViewController = ReflectionListViewController(reflections: [Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!),
-                                                                                 Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
+    private let reflectionListViewController = ReflectionListViewController(reflections:
+        [Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!),
+        Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
 
     private let reportButton: UIButton = {
         let button = UIButton(type: .system)

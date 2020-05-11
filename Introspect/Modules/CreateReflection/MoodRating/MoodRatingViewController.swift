@@ -13,11 +13,9 @@ class MoodRatingViewController: UIViewController {
     
     let okButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: nil)
     
-    let moodLabel: UILabel = {
-        let label = UILabel()
+    let moodLabel: Label = {
+        let label = Label(style: .title2)
         label.text = "How are you feeling now?"
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
-        label.adjustsFontForContentSizeCategory = true
         return label
     }()
     
@@ -27,11 +25,9 @@ class MoodRatingViewController: UIViewController {
         return view
     }()
     
-    let hotlineLabel: UILabel = {
-        let label = UILabel()
+    let hotlineLabel: Label = {
+        let label = Label(style: .bodyRegular)
         label.text = "Hotline"
-        label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.adjustsFontForContentSizeCategory = true
         return label
     }()
     

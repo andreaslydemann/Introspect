@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FinniversKit
 
 class PastReflectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
@@ -18,39 +19,31 @@ class PastReflectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let dayLabel: UILabel = {
-        let label = UILabel()
+    let dayLabel: Label = {
+        let label = Label(style: .title3)
         label.text = "22"
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
-        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()
     
-    let monthLabel: UILabel = {
-        let label = UILabel()
+    let monthLabel: Label = {
+        let label = Label(style: .title3)
         label.text = "Jan"
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
-        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()
     
-    let yearLabel: UILabel = {
-        let label = UILabel()
+    let yearLabel: Label = {
+        let label = Label(style: .title3)
         label.text = "2020"
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
-        label.adjustsFontForContentSizeCategory = true
         label.alpha = 0.5
         label.textAlignment = .center
         return label
     }()
     
-    let ratingLabel: UILabel = {
-        let label = UILabel()
+    let ratingLabel: Label = {
+        let label = Label(style: .title2)
         label.text = "Feeling good"
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()

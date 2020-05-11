@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FinniversKit
 
 class NewReflectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
@@ -19,17 +20,14 @@ class NewReflectionCell: UICollectionViewCell {
     }
 
     let plusIcon: UIImageView = {
-        let image = UIImage(systemName: "plus")
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView(image: UIImage(systemName: "plus"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
-    let nameLabel: UILabel = {
-        let label = UILabel()
+    let nameLabel: Label = {
+        let label = Label(style: .title3)
         label.text = "Add reflection"
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
-        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .center
         return label
     }()

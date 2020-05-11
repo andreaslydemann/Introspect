@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func registerServices(container: Swinject.Container) {
-        container.register(HomeViewController.self, factory: { _ in HomeViewController(user: User(name: "Andreas")) })
+        container.register(HomeViewController.self, factory: { _ in HomeViewController(user: User(name: "User")) })
         // container.autoregister(HomeViewController.self, initializer: HomeViewController.init)
     }
 }

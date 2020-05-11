@@ -11,8 +11,7 @@ import FinniversKit
 
 class MoodRatingViewController: UIViewController {
     
-    let okButton = UIBarButtonItem(title: "OK",
-                                   style: .plain, target: self, action: nil)
+    let okButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: nil)
     
     let moodLabel: UILabel = {
         let label = UILabel()
@@ -36,9 +35,9 @@ class MoodRatingViewController: UIViewController {
         return label
     }()
     
-    let nextButton: Button = {
+    let continueButton: Button = {
         let button = Button(style: .default)
-        button.setTitle("Next", for: .normal)
+        button.setTitle("Continue", for: .normal)
         return button
     }()
     
@@ -49,7 +48,7 @@ class MoodRatingViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .systemBackground
         
-        view.addSubviews(moodLabel, moodRatingView, hotlineLabel, nextButton)
+        view.addSubviews(moodLabel, moodRatingView, hotlineLabel, continueButton)
         
         moodLabel.anchor(top: nil,
                          leading: view.layoutMarginsGuide.leadingAnchor,
@@ -69,7 +68,7 @@ class MoodRatingViewController: UIViewController {
                             trailing: view.layoutMarginsGuide.trailingAnchor,
                             padding: .init(top: 50, left: 0, bottom: 0, right: 0))
         
-        nextButton.anchor(top: nil,
+        continueButton.anchor(top: nil,
                           leading: view.layoutMarginsGuide.leadingAnchor,
                           bottom: view.safeAreaLayoutGuide.bottomAnchor,
                           trailing: view.layoutMarginsGuide.trailingAnchor)

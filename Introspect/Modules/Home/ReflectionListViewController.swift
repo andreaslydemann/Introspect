@@ -14,10 +14,6 @@ protocol ReflectionListViewControllerDelegate: AnyObject {
     func didSelectPastReflection(_ userId: String, viewController: ReflectionListViewController)
 }
 
-struct Reflection {
-    let date: Date
-}
-
 final class ReflectionListViewController: UIViewController {
     weak var delegate: ReflectionListViewControllerDelegate?
     private var reflections: [Reflection] = []

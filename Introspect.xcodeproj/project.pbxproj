@@ -28,6 +28,8 @@
 		8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* ReflectionSection.swift */; };
 		8EA4EC9E2469E42800EE6421 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4EC9D2469E42800EE6421 /* NavigationController.swift */; };
 		8EA4ECA02469E46100EE6421 /* UserInterfaceStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4EC9F2469E46100EE6421 /* UserInterfaceStyle.swift */; };
+		8EA4ECA32469E55800EE6421 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4ECA22469E55800EE6421 /* Reflection.swift */; };
+		8EA4ECA52469E5DC00EE6421 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4ECA42469E5DC00EE6421 /* User.swift */; };
 		8ECDA24B2469991100E21E22 /* FinniversKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECDA24A2469991100E21E22 /* FinniversKit */; };
 		8ECDA26324699E0D00E21E22 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA25F24699E0C00E21E22 /* UIView+AddSubviews.swift */; };
 		8ECDA26424699E0D00E21E22 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA26024699E0C00E21E22 /* UICollectionView+Register.swift */; };
@@ -91,6 +93,8 @@
 		8E949AA523AB3A9E00476855 /* ReflectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionSection.swift; sourceTree = "<group>"; };
 		8EA4EC9D2469E42800EE6421 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		8EA4EC9F2469E46100EE6421 /* UserInterfaceStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceStyle.swift; sourceTree = "<group>"; };
+		8EA4ECA22469E55800EE6421 /* Reflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
+		8EA4ECA42469E5DC00EE6421 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8ECDA24C246999D000E21E22 /* FinniversKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FinniversKit; sourceTree = "<group>"; };
 		8ECDA25F24699E0C00E21E22 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		8ECDA26024699E0C00E21E22 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
@@ -147,14 +151,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E1ABB6923C0A8EC0060C8DF /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */,
-			);
-			path = Flow;
-			sourceTree = "<group>";
-		};
 		8E42F58F2465CA7D00115E83 /* CreateReflection */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +231,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8EA4ECA12469E54800EE6421 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EA4ECA22469E55800EE6421 /* Reflection.swift */,
+				8EA4ECA42469E5DC00EE6421 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8ECDA24D24699D8100E21E22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8EA4ECA12469E54800EE6421 /* Models */,
 				8ECDA24E24699D8A00E21E22 /* Extensions */,
 				8EA4EC9D2469E42800EE6421 /* NavigationController.swift */,
 				8EA4EC9F2469E46100EE6421 /* UserInterfaceStyle.swift */,
@@ -333,11 +339,11 @@
 		8EDCD6B023978486002C6EA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8E1ABB6923C0A8EC0060C8DF /* Flow */,
 				8E949AA723AB420000476855 /* Cells */,
 				8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */,
 				8EDCD67B23970303002C6EA3 /* ReflectionListViewController.swift */,
 				8E949AA523AB3A9E00476855 /* ReflectionSection.swift */,
+				8E1ABB6A23C0A9080060C8DF /* CarouselFlow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 			files = (
 				8ED0C64723AA07B400DAAB34 /* NewReflectionCell.swift in Sources */,
 				8EDCD67C23970303002C6EA3 /* ReflectionListViewController.swift in Sources */,
+				8EA4ECA32469E55800EE6421 /* Reflection.swift in Sources */,
 				8ECDA26424699E0D00E21E22 /* UICollectionView+Register.swift in Sources */,
 				8ECDA26524699E0D00E21E22 /* UIView+AutoLayout.swift in Sources */,
 				8E42F5912465CAAF00115E83 /* MoodRatingViewController.swift in Sources */,
@@ -589,6 +596,7 @@
 				8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */,
 				8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
+				8EA4ECA52469E5DC00EE6421 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

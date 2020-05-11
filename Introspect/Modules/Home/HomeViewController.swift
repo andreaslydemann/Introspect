@@ -9,10 +9,6 @@
 import SFSafeSymbols
 import UIKit
 
-struct User {
-    let name: String
-}
-
 class HomeViewController: UIViewController {
     private var user: User?
 

@@ -7,9 +7,7 @@
 //
 
 import SFSafeSymbols
-import UI
 import UIKit
-import SwiftUI
 
 struct User {
     let name: String

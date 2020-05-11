@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import UI
+import FinniversKit
 
 class MoodRatingViewController: UIViewController {
     

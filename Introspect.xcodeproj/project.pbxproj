@@ -26,6 +26,11 @@
 		8E7E7F0123A93F4300555D65 /* ReflectionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */; };
 		8E7E7F0323A94E1300555D65 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */; };
 		8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E949AA523AB3A9E00476855 /* ReflectionSection.swift */; };
+		8ECDA24B2469991100E21E22 /* FinniversKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECDA24A2469991100E21E22 /* FinniversKit */; };
+		8ECDA26324699E0D00E21E22 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA25F24699E0C00E21E22 /* UIView+AddSubviews.swift */; };
+		8ECDA26424699E0D00E21E22 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA26024699E0C00E21E22 /* UICollectionView+Register.swift */; };
+		8ECDA26524699E0D00E21E22 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA26124699E0D00E21E22 /* UIView+AutoLayout.swift */; };
+		8ECDA26624699E0D00E21E22 /* PageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA26224699E0D00E21E22 /* PageCollectionLayout.swift */; };
 		8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */; };
 		8ED0C63C23A9F60200DAAB34 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */; };
 		8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED0C64223A9F8F800DAAB34 /* DateHelper */; };
@@ -41,8 +46,6 @@
 		8EDCD69D23970306002C6EA3 /* IntrospectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD69C23970306002C6EA3 /* IntrospectUITests.swift */; };
 		8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AB23970C56002C6EA3 /* Swinject */; };
 		8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */; };
-		8EDCD6B22397884B002C6EA3 /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCD6B12397884B002C6EA3 /* UI */; };
-		8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = 8EDCD6BC239836A5002C6EA3 /* UI */; };
 		8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */; };
 		8EE6D20B23A682080080C060 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EE6D20A23A682080080C060 /* Rswift */; };
 /* End PBXBuildFile section */
@@ -84,6 +87,11 @@
 		8E7E7F0023A93F4300555D65 /* ReflectionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionListViewControllerTests.swift; sourceTree = "<group>"; };
 		8E7E7F0223A94E1300555D65 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		8E949AA523AB3A9E00476855 /* ReflectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionSection.swift; sourceTree = "<group>"; };
+		8ECDA24C246999D000E21E22 /* FinniversKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FinniversKit; sourceTree = "<group>"; };
+		8ECDA25F24699E0C00E21E22 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
+		8ECDA26024699E0C00E21E22 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		8ECDA26124699E0D00E21E22 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		8ECDA26224699E0D00E21E22 /* PageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionLayout.swift; sourceTree = "<group>"; };
 		8ED0C63B23A9F60200DAAB34 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		8ED0C64623AA07B400DAAB34 /* NewReflectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReflectionCell.swift; sourceTree = "<group>"; };
 		8ED5BFD223A687E6009D98A4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 		8EDCD69823970306002C6EA3 /* IntrospectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntrospectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDCD69C23970306002C6EA3 /* IntrospectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrospectUITests.swift; sourceTree = "<group>"; };
 		8EDCD69E23970306002C6EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EDCD6B12397884B002C6EA3 /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
 		8EDCD6BE23983781002C6EA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,10 +118,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED0C64323A9F8F800DAAB34 /* DateHelper in Frameworks */,
+				8ECDA24B2469991100E21E22 /* FinniversKit in Frameworks */,
 				8ED0C63923A9EBBA00DAAB34 /* SFSafeSymbols in Frameworks */,
 				8EDCD6AC23970C56002C6EA3 /* Swinject in Frameworks */,
 				8EE6D20B23A682080080C060 /* Rswift in Frameworks */,
-				8EDCD6BD239836A5002C6EA3 /* UI in Frameworks */,
 				8EDCD6AF23970C85002C6EA3 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +172,8 @@
 			children = (
 				8E42F5AE2468B5D300115E83 /* Assets.xcassets */,
 				8E42F5AF2468B5D300115E83 /* Icons.xcassets */,
-				8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */,
 				8E42F5B72468B5D300115E83 /* CheckboxAnimation.xcassets */,
+				8E42F5AD2468B5D300115E83 /* RadiobuttonAnimation.xcassets */,
 				8E42F5B02468B5D300115E83 /* Sounds */,
 				8E42F5B92468B5D300115E83 /* Fonts */,
 			);
@@ -224,6 +231,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8ECDA24D24699D8100E21E22 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8ECDA24E24699D8A00E21E22 /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8ECDA24E24699D8A00E21E22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8ECDA26224699E0D00E21E22 /* PageCollectionLayout.swift */,
+				8ECDA26024699E0C00E21E22 /* UICollectionView+Register.swift */,
+				8ECDA25F24699E0C00E21E22 /* UIView+AddSubviews.swift */,
+				8ECDA26124699E0D00E21E22 /* UIView+AutoLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8ED0C63A23A9F5C700DAAB34 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +272,7 @@
 		8EDCD66B23970303002C6EA3 = {
 			isa = PBXGroup;
 			children = (
-				8EDCD6B12397884B002C6EA3 /* UI */,
+				8ECDA24C246999D000E21E22 /* FinniversKit */,
 				8EDCD67623970303002C6EA3 /* Introspect */,
 				8EDCD69023970306002C6EA3 /* IntrospectTests */,
 				8EDCD69B23970306002C6EA3 /* IntrospectUITests */,
@@ -270,6 +296,7 @@
 			children = (
 				8ED5BFD123A6855C009D98A4 /* Resources */,
 				8E7E7EFE23A7E39C00555D65 /* Modules */,
+				8ECDA24D24699D8100E21E22 /* Classes */,
 				8EDCD67723970303002C6EA3 /* AppDelegate.swift */,
 				8EDCD67923970303002C6EA3 /* SceneDelegate.swift */,
 				8EDCD68823970306002C6EA3 /* Info.plist */,
@@ -338,10 +365,10 @@
 			packageProductDependencies = (
 				8EDCD6AB23970C56002C6EA3 /* Swinject */,
 				8EDCD6AE23970C85002C6EA3 /* SwinjectAutoregistration */,
-				8EDCD6BC239836A5002C6EA3 /* UI */,
 				8EE6D20A23A682080080C060 /* Rswift */,
 				8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */,
 				8ED0C64223A9F8F800DAAB34 /* DateHelper */,
+				8ECDA24A2469991100E21E22 /* FinniversKit */,
 			);
 			productName = Introspect;
 			productReference = 8EDCD67423970303002C6EA3 /* Introspect.app */;
@@ -445,7 +472,6 @@
 				8E42F5C12468B5D300115E83 /* Piano.sf2 in Resources */,
 				8E42F5BE2468B5D300115E83 /* RadiobuttonAnimation.xcassets in Resources */,
 				8EDCD68723970306002C6EA3 /* LaunchScreen.storyboard in Resources */,
-				8EDCD6B22397884B002C6EA3 /* UI in Resources */,
 				8E42F5CA2468B5D300115E83 /* FINNTypeWebStrippet-Medium.ttf in Resources */,
 				8E42F5C32468B5D300115E83 /* pusefinn.wav in Resources */,
 				8EDCD68423970306002C6EA3 /* Assets.xcassets in Resources */,
@@ -542,12 +568,16 @@
 			files = (
 				8ED0C64723AA07B400DAAB34 /* NewReflectionCell.swift in Sources */,
 				8EDCD67C23970303002C6EA3 /* ReflectionListViewController.swift in Sources */,
+				8ECDA26424699E0D00E21E22 /* UICollectionView+Register.swift in Sources */,
+				8ECDA26524699E0D00E21E22 /* UIView+AutoLayout.swift in Sources */,
 				8E42F5912465CAAF00115E83 /* MoodRatingViewController.swift in Sources */,
 				8ED5BFD323A687E6009D98A4 /* R.generated.swift in Sources */,
 				8EDCD67823970303002C6EA3 /* AppDelegate.swift in Sources */,
+				8ECDA26624699E0D00E21E22 /* PageCollectionLayout.swift in Sources */,
 				8EDCD68223970303002C6EA3 /* Introspect.xcdatamodeld in Sources */,
 				8E1ABB6B23C0A9080060C8DF /* CarouselFlow.swift in Sources */,
 				8EDCD67A23970303002C6EA3 /* SceneDelegate.swift in Sources */,
+				8ECDA26324699E0D00E21E22 /* UIView+AddSubviews.swift in Sources */,
 				8E949AA623AB3A9E00476855 /* ReflectionSection.swift in Sources */,
 				8EDB016023AA984C0032BEFA /* PastReflectionCell.swift in Sources */,
 				8EDCD6BF23983781002C6EA3 /* HomeViewController.swift in Sources */,
@@ -922,6 +952,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8ECDA24A2469991100E21E22 /* FinniversKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinniversKit;
+		};
 		8ED0C63823A9EBBA00DAAB34 /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8ED0C63723A9EBBA00DAAB34 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
@@ -941,10 +975,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8EDCD6AD23970C85002C6EA3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
-		};
-		8EDCD6BC239836A5002C6EA3 /* UI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UI;
 		};
 		8EE6D20A23A682080080C060 /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;

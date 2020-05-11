@@ -14,5 +14,5 @@ disabled_rules: # rule identifiers to exclude from running
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-  - UI/*/*/FinniversKit
+  - FinniversKit
   - "*/*/*.generated.swift" # dependent on file hierarchy, no fix as of yet

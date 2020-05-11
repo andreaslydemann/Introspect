@@ -6,7 +6,6 @@
 //  Copyright © 2020 Andreas Lüdemann. All rights reserved.
 //
 
-import UI
 import UIKit
 
 class CarouselFlowLayout: PageCollectionLayout {

@@ -16,6 +16,14 @@ class MoodRatingViewController: UIViewController {
     let moodLabel: Label = {
         let label = Label(style: .title2)
         label.text = "How are you feeling now?"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let dateLabel: Label = {
+        let label = Label(style: .body)
+        label.text = "Jul 20th 2020"
+        label.textAlignment = .center
         return label
     }()
     
@@ -26,13 +34,23 @@ class MoodRatingViewController: UIViewController {
     }()
     
     let hotlineLabel: Label = {
-        let label = Label(style: .bodyRegular)
-        label.text = "Hotline"
+        let label = Label(style: .body)
+        
+        let boldText = "Suicide prevention hotline. "
+        let attrs = [NSAttributedString.Key.font: UIFont.bodyStrong]
+        let attributedString = NSMutableAttributedString(string: boldText)
+
+        let normalText = "Call now"
+        let normalString = NSMutableAttributedString(string: normalText, attributes: attrs)
+
+        attributedString.append(normalString)
+        label.attributedText = attributedString
+        label.textAlignment = .center
         return label
     }()
     
     let continueButton: Button = {
-        let button = Button(style: .default)
+        let button = Button(style: .callToAction)
         button.setTitle("Continue", for: .normal)
         return button
     }()
@@ -44,9 +62,15 @@ class MoodRatingViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .systemBackground
         
-        view.addSubviews(moodLabel, moodRatingView, hotlineLabel, continueButton)
+        view.addSubviews(moodLabel, dateLabel, moodRatingView, hotlineLabel, continueButton)
         
         moodLabel.anchor(top: nil,
+                         leading: view.layoutMarginsGuide.leadingAnchor,
+                         bottom: dateLabel.topAnchor,
+                         trailing: view.layoutMarginsGuide.trailingAnchor,
+                         padding: .init(bottom: .spacingM))
+        
+        dateLabel.anchor(top: nil,
                          leading: view.layoutMarginsGuide.leadingAnchor,
                          bottom: moodRatingView.topAnchor,
                          trailing: view.layoutMarginsGuide.trailingAnchor,

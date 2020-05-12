@@ -50,12 +50,7 @@ class PastReflectionCell: UICollectionViewCell {
     
     let containerView: UIView = {
         let containerView = UIView()
-        containerView.layer.shadowOffset = .init(width: containerView.frame.width + 2,
-                                                 height: containerView.frame.height + 2)
         containerView.layer.cornerRadius = 20
-        containerView.layer.shadowRadius = 4
-        containerView.layer.shadowOpacity = 0.23
-        containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.clipsToBounds = true
         return containerView
     }()
@@ -75,6 +70,8 @@ class PastReflectionCell: UICollectionViewCell {
     }()
     
     func setupViews() {
+        addBackgroundShadow(to: contentView)
+        
         contentView.addSubview(containerView)
         containerView.addSubview(backgroundImage)
         backgroundImage.addSubviews(dateView, ratingLabel)
@@ -99,5 +96,12 @@ class PastReflectionCell: UICollectionViewCell {
                            leading: backgroundImage.layoutMarginsGuide.leadingAnchor,
                            bottom: backgroundImage.layoutMarginsGuide.bottomAnchor,
                            trailing: backgroundImage.layoutMarginsGuide.trailingAnchor)
+    }
+    
+    private func addBackgroundShadow(to view: UIView) {
+        view.dropShadow(color: .black,
+                        opacity: 0.25,
+                        offset: CGSize(width: 5, height: 5),
+                        radius: 5)
     }
 }

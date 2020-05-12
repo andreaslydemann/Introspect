@@ -36,13 +36,11 @@ class NewReflectionCell: UICollectionViewCell {
         let backgroundView = UIView()
 
         backgroundView.backgroundColor = .systemTeal
-        backgroundView.layer.shadowOffset =
-            .init(width: backgroundView.frame.width + 2,
-                  height: backgroundView.frame.height + 2)
         backgroundView.layer.cornerRadius = 20
-        backgroundView.layer.shadowRadius = 4
-        backgroundView.layer.shadowOpacity = 0.23
-        backgroundView.layer.shadowColor = UIColor.black.cgColor
+        backgroundView.dropShadow(color: .black,
+                                  opacity: 0.25,
+                                  offset: CGSize(width: 5, height: 5),
+                                  radius: 5)
 
         return backgroundView
     }()

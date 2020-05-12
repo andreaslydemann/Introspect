@@ -20,7 +20,7 @@ class NewReflectionCell: UICollectionViewCell {
     }
 
     let plusIcon: UIImageView = {
-        let imageView = UIImageView(image: UIImage(systemName: "plus"))
+        let imageView = UIImageView(image: R.image.plus())
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

@@ -61,13 +61,13 @@ class HomeViewController: UIViewController {
                              leading: view.layoutMarginsGuide.leadingAnchor,
                              bottom: reflectionListViewController.view.topAnchor,
                              trailing: view.layoutMarginsGuide.trailingAnchor,
-                             padding: .init(top: 100, left: 0, bottom: 15, right: 0))
+                             padding: .init(top: .spacingXXL, bottom: .spacingM))
 
         reflectionListViewController.view.anchor(top: greetingLabel.bottomAnchor,
                                               leading: view.leadingAnchor,
                                               bottom: nil,
                                               trailing: view.trailingAnchor,
-                                              padding: .init(top: 15, left: 0, bottom: 15, right: 0))
+                                              padding: .init(top: .spacingM, bottom: .spacingM))
 
         footerView.anchor(top: reflectionListViewController.view.bottomAnchor,
                           leading: view.layoutMarginsGuide.leadingAnchor,

@@ -50,7 +50,8 @@ class PastReflectionCell: UICollectionViewCell {
     
     let containerView: UIView = {
         let containerView = UIView()
-        containerView.layer.shadowOffset = .init(width: containerView.frame.width + 2, height: containerView.frame.height + 2)
+        containerView.layer.shadowOffset = .init(width: containerView.frame.width + 2,
+                                                 height: containerView.frame.height + 2)
         containerView.layer.cornerRadius = 20
         containerView.layer.shadowRadius = 4
         containerView.layer.shadowOpacity = 0.23
@@ -82,9 +83,12 @@ class PastReflectionCell: UICollectionViewCell {
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
-                             padding: .init(top: 8, left: 0, bottom: 8, right: 0))
+                             padding: .init(top: .spacingS, bottom: .spacingS))
         
-        backgroundImage.layoutMargins = .init(top: 24, left: 24, bottom: 36, right: 24)
+        backgroundImage.layoutMargins = .init(top: .spacingL,
+                                              left: .spacingL,
+                                              bottom: .spacingXL,
+                                              right: .spacingL)
         
         dateView.anchor(top: backgroundImage.layoutMarginsGuide.topAnchor,
                         leading: backgroundImage.layoutMarginsGuide.leadingAnchor,

@@ -50,7 +50,7 @@ class MoodRatingViewController: UIViewController {
                          leading: view.layoutMarginsGuide.leadingAnchor,
                          bottom: moodRatingView.topAnchor,
                          trailing: view.layoutMarginsGuide.trailingAnchor,
-                         padding: .init(top: 0, left: 0, bottom: 100, right: 0))
+                         padding: .init(bottom: .spacingXXL))
         
         NSLayoutConstraint.activate([
             moodRatingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -62,12 +62,12 @@ class MoodRatingViewController: UIViewController {
                             leading: view.layoutMarginsGuide.leadingAnchor,
                             bottom: nil,
                             trailing: view.layoutMarginsGuide.trailingAnchor,
-                            padding: .init(top: 50, left: 0, bottom: 0, right: 0))
+                            padding: .init(top: .spacingXXL))
         
         continueButton.anchor(top: nil,
-                          leading: view.layoutMarginsGuide.leadingAnchor,
-                          bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                          trailing: view.layoutMarginsGuide.trailingAnchor)
+                              leading: view.layoutMarginsGuide.leadingAnchor,
+                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              trailing: view.layoutMarginsGuide.trailingAnchor)
     }
     
     override func viewDidLoad() {

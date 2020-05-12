@@ -36,7 +36,9 @@ class NewReflectionCell: UICollectionViewCell {
         let backgroundView = UIView()
 
         backgroundView.backgroundColor = .systemTeal
-        backgroundView.layer.shadowOffset = .init(width: backgroundView.frame.width + 2, height: backgroundView.frame.height + 2)
+        backgroundView.layer.shadowOffset =
+            .init(width: backgroundView.frame.width + 2,
+                  height: backgroundView.frame.height + 2)
         backgroundView.layer.cornerRadius = 20
         backgroundView.layer.shadowRadius = 4
         backgroundView.layer.shadowOpacity = 0.23
@@ -53,14 +55,17 @@ class NewReflectionCell: UICollectionViewCell {
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
                              trailing: trailingAnchor,
-                             padding: .init(top: 8, left: 8, bottom: 8, right: 8))
+                             padding: .init(top: .spacingS,
+                                            left: .spacingS,
+                                            bottom: .spacingS,
+                                            right: .spacingS))
 
-        plusIcon.centerInSuperview(size: CGSize(width: 60, height: 60))
+        plusIcon.centerInSuperview(size: CGSize(width: 50, height: 50))
 
         nameLabel.anchor(top: plusIcon.bottomAnchor,
                          leading: containerView.leadingAnchor,
                          bottom: nil,
                          trailing: containerView.trailingAnchor,
-                         padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+                         padding: .init(top: .spacingM))
     }
 }

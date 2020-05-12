@@ -88,7 +88,9 @@ extension HomeViewController: ReflectionListViewControllerDelegate {
         // TODO: Should use a navigator
         
         let vc = MoodRatingViewController()
-        let nc = UINavigationController(rootViewController: vc)
+        let nc = NavigationController(rootViewController: vc)
+        nc.hairlineIsHidden = true
+        
         self.navigationController?.present(nc, animated: true, completion: nil)
         
         print("New reflection selected")

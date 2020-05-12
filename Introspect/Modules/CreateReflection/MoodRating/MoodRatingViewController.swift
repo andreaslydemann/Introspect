@@ -11,20 +11,46 @@ import FinniversKit
 
 class MoodRatingViewController: UIViewController {
     
-    let okButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: nil)
-    
-    let moodLabel: Label = {
+    private let closeButton = UIBarButtonItem(image: R.image.close(),
+                                              style: .done,
+                                              target: self,
+                                              action: nil)
+
+    private let moodLabel: Label = {
         let label = Label(style: .title2)
         label.text = "How are you feeling now?"
         label.textAlignment = .center
         return label
     }()
     
-    let dateLabel: Label = {
+    private let dateLabel: Label = {
         let label = Label(style: .body)
         label.text = "Jul 20th 2020"
         label.textAlignment = .center
         return label
+    }()
+    
+    private lazy var headlineView: UIView = {
+        let container = UIView()
+        let headlines = UIView()
+        
+        container.addSubviews(headlines)
+        headlines.centerInSuperview()
+        
+        headlines.addSubviews(moodLabel, dateLabel)
+        
+        moodLabel.anchor(top: headlines.topAnchor,
+                         leading: headlines.leadingAnchor,
+                         bottom: nil,
+                         trailing: headlines.trailingAnchor)
+        
+        dateLabel.anchor(top: moodLabel.bottomAnchor,
+                         leading: headlines.leadingAnchor,
+                         bottom: headlines.bottomAnchor,
+                         trailing: headlines.trailingAnchor,
+                         padding: .init(top: .spacingM))
+        
+        return container
     }()
     
     private lazy var moodRatingView: HappinessRatingView = {
@@ -33,7 +59,7 @@ class MoodRatingViewController: UIViewController {
         return view
     }()
     
-    let hotlineLabel: Label = {
+    private let hotlineLabel: Label = {
         let label = Label(style: .body)
         
         let boldText = "Suicide prevention hotline. "
@@ -49,49 +75,50 @@ class MoodRatingViewController: UIViewController {
         return label
     }()
     
-    let continueButton: Button = {
+    private let continueButton: Button = {
         let button = Button(style: .callToAction)
         button.setTitle("Continue", for: .normal)
         return button
     }()
     
     private func setupNavigationItems() {
-        navigationItem.rightBarButtonItem = okButton
+        navigationItem.leftBarButtonItem = closeButton
     }
     
-    func setupViews() {
+    private func setupViews() {
         view.backgroundColor = .systemBackground
         
-        view.addSubviews(moodLabel, dateLabel, moodRatingView, hotlineLabel, continueButton)
+        let contentView = UIView()
+        view.addSubviews(contentView, continueButton)
         
-        moodLabel.anchor(top: nil,
-                         leading: view.layoutMarginsGuide.leadingAnchor,
-                         bottom: dateLabel.topAnchor,
-                         trailing: view.layoutMarginsGuide.trailingAnchor,
-                         padding: .init(bottom: .spacingM))
-        
-        dateLabel.anchor(top: nil,
-                         leading: view.layoutMarginsGuide.leadingAnchor,
-                         bottom: moodRatingView.topAnchor,
-                         trailing: view.layoutMarginsGuide.trailingAnchor,
-                         padding: .init(bottom: .spacingXXL))
-        
-        NSLayoutConstraint.activate([
-            moodRatingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            moodRatingView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            moodRatingView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
-        ])
-        
-        hotlineLabel.anchor(top: moodRatingView.bottomAnchor,
-                            leading: view.layoutMarginsGuide.leadingAnchor,
-                            bottom: nil,
-                            trailing: view.layoutMarginsGuide.trailingAnchor,
-                            padding: .init(top: .spacingXXL))
+        contentView.anchor(top: view.topAnchor,
+                           leading: view.layoutMarginsGuide.leadingAnchor,
+                           bottom: continueButton.topAnchor,
+                           trailing: view.layoutMarginsGuide.trailingAnchor)
         
         continueButton.anchor(top: nil,
                               leading: view.layoutMarginsGuide.leadingAnchor,
                               bottom: view.safeAreaLayoutGuide.bottomAnchor,
                               trailing: view.layoutMarginsGuide.trailingAnchor)
+        
+        contentView.addSubviews(headlineView, moodRatingView, hotlineLabel)
+        
+        headlineView.anchor(top: contentView.topAnchor,
+                            leading: contentView.leadingAnchor,
+                            bottom: moodRatingView.topAnchor,
+                            trailing: contentView.trailingAnchor)
+        
+        NSLayoutConstraint.activate([
+            moodRatingView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            moodRatingView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            moodRatingView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
+        
+        hotlineLabel.anchor(top: moodRatingView.centerYAnchor,
+                            leading: contentView.leadingAnchor,
+                            bottom: nil,
+                            trailing: contentView.trailingAnchor,
+                            padding: .init(top: .spacingXXL))
     }
     
     override func viewDidLoad() {

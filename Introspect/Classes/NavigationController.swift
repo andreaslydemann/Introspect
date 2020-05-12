@@ -10,6 +10,14 @@ import UIKit
 
 class NavigationController: UINavigationController {
 
+    var hairlineIsHidden: Bool = false {
+        didSet {
+            if hairlineIsHidden {
+                navigationBar.shadowImage = UIImage()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

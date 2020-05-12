@@ -62,13 +62,15 @@ public extension UIView {
             return []
         }
 
+        translatesAutoresizingMaskIntoConstraints = false
+        
         let constraints: [NSLayoutConstraint] = [
             centerYAnchor.constraint(equalTo: superview.centerYAnchor),
             centerXAnchor.constraint(equalTo: superview.centerXAnchor),
         ]
 
         NSLayoutConstraint.activate(constraints)
-
+        
         return constraints
     }
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ReflectionListViewController.swift
 //  Introspect
 //
 //  Created by Andreas Lüdemann on 03/12/2019.
@@ -14,21 +14,19 @@ protocol ReflectionListViewControllerDelegate: AnyObject {
     func didSelectPastReflection(_ userId: String, viewController: ReflectionListViewController)
 }
 
-final class ReflectionListViewController: UIViewController {
-    weak var delegate: ReflectionListViewControllerDelegate?
+class ReflectionListViewController: UIViewController {
+    
+    // MARK: - Public properties
+    
+    public weak var delegate: ReflectionListViewControllerDelegate?
+    
+    // MARK: - Private properties
+    
     private var reflections: [Reflection] = []
-
-    convenience init(reflections: [Reflection]) {
-        self.init()
-        self.reflections = reflections
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-    }
-
-    lazy var collectionView: UICollectionView = {
+    
+    private lazy var section: Section = ReflectionSection(reflections: reflections)
+    
+    private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CarouselFlowLayout())
         collectionView.decelerationRate = .fast
         collectionView.showsHorizontalScrollIndicator = false
@@ -44,16 +42,30 @@ final class ReflectionListViewController: UIViewController {
         return collectionView
     }()
 
-    lazy var section: Section = ReflectionSection(reflections: reflections)
-
-    func setupViews() {
-        view.addSubview(collectionView)
-        collectionView.fillSuperview()
+    // MARK: - Init
+    
+    convenience init(reflections: [Reflection]) {
+        self.init()
+        self.reflections = reflections
     }
 
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collectionView.reloadData()
+    }
+
+    // MARK: - Private methods
+
+    private func setup() {
+        view.addSubview(collectionView)
+        collectionView.fillSuperview()
     }
 }
 

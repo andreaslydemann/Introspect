@@ -19,8 +19,6 @@ open class PageCollectionLayout: UICollectionViewFlowLayout {
     }
 }
 
-// MARK: life cicle
-
 extension PageCollectionLayout {
     
     fileprivate func commonInit(_ itemSize: CGSize) {
@@ -29,8 +27,6 @@ extension PageCollectionLayout {
         self.itemSize      = itemSize
     }
 }
-
-// MARK: override
 
 extension PageCollectionLayout {
     
@@ -124,8 +120,6 @@ extension PageCollectionLayout {
         return newAttributesArray
     }
 }
-
-// MARK: helpers
 
 extension PageCollectionLayout {
     

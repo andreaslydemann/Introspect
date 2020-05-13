@@ -10,18 +10,20 @@ import UIKit
 
 class CarouselFlowLayout: PageCollectionLayout {
     
-    static var cellSize: CGSize {
+    // MARK: - Public properties
+    
+    public static var cellSize: CGSize {
         return CGSize(width: 300, height: 500)
     }
     
+    // MARK: - Init
+    
     override public init(itemSize: CGSize = CarouselFlowLayout.cellSize) {
         super.init(itemSize: itemSize)
-        //scrollDirection = .horizontal
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         itemSize = CarouselFlowLayout.cellSize
-        //scrollDirection = .horizontal
     }
 }

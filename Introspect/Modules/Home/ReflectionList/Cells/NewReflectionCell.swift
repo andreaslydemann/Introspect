@@ -10,42 +10,49 @@ import UIKit
 import FinniversKit
 
 class NewReflectionCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    let plusIcon: UIImageView = {
+    
+    // MARK: - Private properties
+    
+    private lazy var plusIcon: UIImageView = {
         let imageView = UIImageView(image: R.image.plus())
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
-    let nameLabel: Label = {
+    private lazy var nameLabel: Label = {
         let label = Label(style: .title3)
         label.text = "Add reflection"
         label.textAlignment = .center
         return label
     }()
 
-    let containerView: UIView = {
-        let backgroundView = UIView()
+    private lazy var containerView: UIView = {
+        let view = UIView()
 
-        backgroundView.backgroundColor = .systemTeal
-        backgroundView.layer.cornerRadius = 20
-        backgroundView.dropShadow(color: .black,
+        view.backgroundColor = .systemTeal
+        view.layer.cornerRadius = 20
+        view.dropShadow(color: .black,
                                   opacity: 0.25,
                                   offset: CGSize(width: 5, height: 5),
                                   radius: 5)
 
-        return backgroundView
+        return view
     }()
+    
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
 
-    func setupViews() {
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Private methods
+
+    private func setup() {
         containerView.addSubviews(plusIcon, nameLabel)
         contentView.addSubview(containerView)
 

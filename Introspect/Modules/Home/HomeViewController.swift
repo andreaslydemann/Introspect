@@ -11,14 +11,16 @@ import UIKit
 import FinniversKit
 
 class HomeViewController: UIViewController {
+    
+    // MARK: - Private properties
+    
     private var user: User?
-
-    convenience init(user: User) {
-        self.init()
-        self.user = user
-    }
-
-    lazy var greetingLabel: Label = {
+    
+    private let reflectionListViewController = ReflectionListViewController(reflections:
+        [Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!),
+        Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
+    
+    private lazy var greetingLabel: Label = {
         let label = Label(style: .title1)
 
         guard let user = user else { fatalError("No user was passed") }
@@ -27,17 +29,13 @@ class HomeViewController: UIViewController {
         return label
     }()
 
-    private let reflectionListViewController = ReflectionListViewController(reflections:
-        [Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!),
-        Reflection(date: Date(fromString: "2001-01-01", format: .isoDate)!)])
-
-    private let reportButton: UIButton = {
+    private lazy var reportButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemSymbol: .chartBar), for: .normal)
         return button
     }()
 
-    private let settingsButton: UIButton = {
+    private lazy var settingsButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemSymbol: .gear), for: .normal)
         return button
@@ -49,7 +47,23 @@ class HomeViewController: UIViewController {
         return footerView
     }()
 
-    func setupViews() {
+    // MARK: - Init
+    
+    convenience init(user: User) {
+        self.init()
+        self.user = user
+    }
+
+    // MARK: - Lifecycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    // MARK: - Private methods
+
+    private func setup() {
         view.backgroundColor = .systemBackground
 
         view.addSubviews(greetingLabel, reflectionListViewController.view, footerView)
@@ -75,17 +89,10 @@ class HomeViewController: UIViewController {
                           trailing: view.layoutMarginsGuide.trailingAnchor,
                           size: .init(width: 0, height: 50))
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-    }
 }
 
 extension HomeViewController: ReflectionListViewControllerDelegate {
     public func didSelectNewReflection(_ userId: String, viewController _: ReflectionListViewController) {
-        
-        // TODO: Should use a navigator
         
         let vc = MoodRatingViewController()
         let nc = NavigationController(rootViewController: vc)

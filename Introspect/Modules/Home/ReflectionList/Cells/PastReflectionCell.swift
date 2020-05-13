@@ -1,5 +1,5 @@
 //
-//  CompletedReflectionCell.swift
+//  PastReflectionCell.swift
 //  Introspect
 //
 //  Created by Andreas Lüdemann on 18/12/2019.
@@ -10,30 +10,24 @@ import UIKit
 import FinniversKit
 
 class PastReflectionCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
     
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // MARK: - Private properties
     
-    let dayLabel: Label = {
+    private lazy var dayLabel: Label = {
         let label = Label(style: .title3)
         label.text = "22"
         label.textAlignment = .center
         return label
     }()
     
-    let monthLabel: Label = {
+    private lazy var  monthLabel: Label = {
         let label = Label(style: .title3)
         label.text = "Jan"
         label.textAlignment = .center
         return label
     }()
     
-    let yearLabel: Label = {
+    private lazy var  yearLabel: Label = {
         let label = Label(style: .title3)
         label.text = "2020"
         label.alpha = 0.5
@@ -41,35 +35,48 @@ class PastReflectionCell: UICollectionViewCell {
         return label
     }()
     
-    let ratingLabel: Label = {
+    private lazy var  ratingLabel: Label = {
         let label = Label(style: .title2)
         label.text = "Feeling good"
         label.textAlignment = .center
         return label
     }()
     
-    let containerView: UIView = {
+    private lazy var  containerView: UIView = {
         let containerView = UIView()
         containerView.layer.cornerRadius = 20
         containerView.clipsToBounds = true
         return containerView
     }()
     
-    lazy var backgroundImage: UIImageView = {
+    private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView(image: R.image.matteoCatanese())
         imageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         imageView.frame = containerView.frame
         return imageView
     }()
     
-    lazy var dateView: UIStackView = {
+    private lazy var dateView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [dayLabel, monthLabel, yearLabel])
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         return stackView
     }()
     
-    func setupViews() {
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private methods
+    
+    private func setup() {
         addBackgroundShadow(to: contentView)
         
         contentView.addSubview(containerView)

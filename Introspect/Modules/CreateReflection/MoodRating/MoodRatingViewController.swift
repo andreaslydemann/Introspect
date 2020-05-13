@@ -11,19 +11,21 @@ import FinniversKit
 
 class MoodRatingViewController: UIViewController {
     
+    // MARK: - Private properties
+    
     private let closeButton = UIBarButtonItem(image: R.image.close(),
                                               style: .done,
                                               target: self,
                                               action: nil)
 
-    private let moodLabel: Label = {
+    private lazy var moodLabel: Label = {
         let label = Label(style: .title2)
         label.text = "How are you feeling now?"
         label.textAlignment = .center
         return label
     }()
     
-    private let dateLabel: Label = {
+    private lazy var dateLabel: Label = {
         let label = Label(style: .body)
         label.text = "Jul 20th 2020"
         label.textAlignment = .center
@@ -59,7 +61,7 @@ class MoodRatingViewController: UIViewController {
         return view
     }()
     
-    private let hotlineLabel: Label = {
+    private lazy var hotlineLabel: Label = {
         let label = Label(style: .body)
         
         let boldText = "Suicide prevention hotline. "
@@ -75,18 +77,24 @@ class MoodRatingViewController: UIViewController {
         return label
     }()
     
-    private let continueButton: Button = {
+    private lazy var continueButton: Button = {
         let button = Button(style: .callToAction)
         button.setTitle("Continue", for: .normal)
         return button
     }()
     
-    private func setupNavigationItems() {
-        navigationItem.leftBarButtonItem = closeButton
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
     }
     
-    private func setupViews() {
+    // MARK: - Private methods
+    
+    private func setup() {
         view.backgroundColor = .systemBackground
+        navigationItem.leftBarButtonItem = closeButton
         
         let contentView = UIView()
         view.addSubviews(contentView, continueButton)
@@ -98,7 +106,7 @@ class MoodRatingViewController: UIViewController {
         
         continueButton.anchor(top: nil,
                               leading: view.layoutMarginsGuide.leadingAnchor,
-                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              bottom: view.layoutMarginsGuide.bottomAnchor,
                               trailing: view.layoutMarginsGuide.trailingAnchor)
         
         contentView.addSubviews(headlineView, moodRatingView, hotlineLabel)
@@ -119,12 +127,6 @@ class MoodRatingViewController: UIViewController {
                             bottom: nil,
                             trailing: contentView.trailingAnchor,
                             padding: .init(top: .spacingXXL))
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        setupNavigationItems()
     }
 }
 

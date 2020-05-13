@@ -77,9 +77,33 @@ class MoodRatingViewController: UIViewController {
         return label
     }()
     
-    private lazy var continueButton: Button = {
+    private lazy var stackedButtons: UIView = {
+        let view = UIView()
+        
+        view.addSubview(firstPageButton)
+        view.addSubview(secondPageButton)
+
+        firstPageButton.fillInSuperviewLayoutMargins()
+        secondPageButton.fillInSuperviewLayoutMargins()
+
+        return view
+    }()
+    
+    private lazy var firstPageButton: Button = {
         let button = Button(style: .callToAction)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continue", for: .normal)
+        button.addTarget(self, action: #selector(firstPageButtonTap), for: .touchUpInside)
+
+        return button
+    }()
+
+    private lazy var secondPageButton: Button = {
+        let button = Button(style: .callToAction)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Finish", for: .normal)
+        button.addTarget(self, action: #selector(secondPageButtonTap), for: .touchUpInside)
+
         return button
     }()
     
@@ -90,6 +114,15 @@ class MoodRatingViewController: UIViewController {
         setup()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        //if firstPageView.transform == .identity {
+            //secondPageView.transform = CGAffineTransform(translationX: bounds.width, y: 0)
+        secondPageButton.transform = CGAffineTransform(translationX: view.bounds.width, y: 0)
+        //}
+    }
+    
     // MARK: - Private methods
     
     private func setup() {
@@ -97,14 +130,14 @@ class MoodRatingViewController: UIViewController {
         navigationItem.leftBarButtonItem = closeButton
         
         let contentView = UIView()
-        view.addSubviews(contentView, continueButton)
+        view.addSubviews(contentView, stackedButtons)
         
         contentView.anchor(top: view.topAnchor,
                            leading: view.layoutMarginsGuide.leadingAnchor,
-                           bottom: continueButton.topAnchor,
+                           bottom: stackedButtons.topAnchor,
                            trailing: view.layoutMarginsGuide.trailingAnchor)
         
-        continueButton.anchor(top: nil,
+        stackedButtons.anchor(top: nil,
                               leading: view.layoutMarginsGuide.leadingAnchor,
                               bottom: view.layoutMarginsGuide.bottomAnchor,
                               trailing: view.layoutMarginsGuide.trailingAnchor)
@@ -127,6 +160,23 @@ class MoodRatingViewController: UIViewController {
                             bottom: nil,
                             trailing: contentView.trailingAnchor,
                             padding: .init(top: .spacingXXL))
+    }
+    
+    @objc private func firstPageButtonTap() {
+        print("yo1")
+        UIView.animate(withDuration: 0.3) {
+            self.firstPageButton.transform = CGAffineTransform(translationX: -self.view.bounds.width, y: 0)
+            self.secondPageButton.transform = .identity
+
+            //self.firstPageView.transform = CGAffineTransform(translationX: -self.view.bounds.width, y: 0)
+            //self.secondPageView.transform = .identity
+        }
+        //delegate?.christmasWishListViewDidSelectCreateWishList(self)
+    }
+
+    @objc private func secondPageButtonTap() {
+        print("yo2")
+        //delegate?.christmasWishListViewDidSelectDone(self)
     }
 }
 
